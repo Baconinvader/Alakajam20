@@ -6,6 +6,8 @@ class_name InteractArea
 ## The object this is attached to
 @onready var obj:Node2D = get_parent()
 
+@export var marker_offset:float = -16
+
 ## Whether the player is close enough to this area to interact with it's object
 var in_range:bool = false
 
@@ -26,8 +28,8 @@ func _set_player_can_interact(val:bool):
 ## Makes the marker go up and down
 func create_move_marker_tween():
 	var t:Tween = create_tween()
-	t.tween_property($marker, "position:y", 16, marker_move_time*0.5)
-	t.tween_property($marker, "position:y", -16, marker_move_time*0.5)
+	t.tween_property($marker, "position:y", marker_offset + 16, marker_move_time*0.5)
+	t.tween_property($marker, "position:y", marker_offset + -16, marker_move_time*0.5)
 	t.tween_callback(create_move_marker_tween)
 
 func _ready():
