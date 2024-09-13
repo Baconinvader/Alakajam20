@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbxh6udih8jhj"]
+
+[ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_nbvfg"]
+[ext_resource type="Script" path="res://entities/creature.gd" id="2_0resd"]
+
+[node name="Creature" instance=ExtResource("1_nbvfg")]
+script = ExtResource("2_0resd")
+move_speed = 96.0
