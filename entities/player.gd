@@ -3,6 +3,9 @@ extends Creature
 ## Player
 class_name Player
 
+## Area used to check if the player is in range of an object to interact with
+@onready var interaction_area = $interaction_area
+
 func _physics_process(_delta):
 	super._physics_process(_delta)
 	
