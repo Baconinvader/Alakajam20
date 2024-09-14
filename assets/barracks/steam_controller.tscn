@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgcgkpatpek5g"]
+
+[ext_resource type="Script" path="res://assets/barracks/steam_controller.gd" id="1_u8vah"]
+[ext_resource type="PackedScene" uid="uid://cp7ymcig4csyl" path="res://assets/trap/kill_area.tscn" id="2_we4jn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pced8"]
+
+[node name="SteamController" type="Node2D"]
+script = ExtResource("1_u8vah")
+
+[node name="clouds" type="Node2D" parent="."]
+
+[node name="kill_area" parent="." instance=ExtResource("2_we4jn")]
+
+[node name="shape" type="CollisionShape2D" parent="kill_area"]
+shape = SubResource("CircleShape2D_pced8")

@@ -10,10 +10,14 @@ class_name Entity
 @export var start_visible:bool = true
 @export var is_static:bool = true
 
+## Whether this object has been "freed" this loop, like queue_free but reversible
+var freed_loop:bool = false
+
 ## Override this as required, called whenever a loop reset occurs
 func reset_loop():
 	visible = true
 	$shape.disabled = not start_collidable
+	freed_loop = false
 	
 func _ready():
 	if is_static:
@@ -30,6 +34,7 @@ func _physics_process(_delta):
 func free_loop():
 	visible = false
 	$shape.disabled = true
+	freed_loop = true
 	
 ## Override this as required, called whenever interaction occurs
 func interact():

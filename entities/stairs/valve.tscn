@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=3 uid="uid://p1nayk7306ne"]
+
+[ext_resource type="PackedScene" uid="uid://bs86fwl84ip6a" path="res://entities/switch.tscn" id="1_b0rf0"]
+[ext_resource type="Texture2D" uid="uid://sdqrhanktnd3" path="res://assets/stairs/valve_off.png" id="2_1k38h"]
+[ext_resource type="Script" path="res://entities/stairs/valve.gd" id="2_l8duu"]
+[ext_resource type="Texture2D" uid="uid://bin05wobl0pd7" path="res://assets/stairs/valve_on.png" id="3_u5gkn"]
+
+[node name="Valve" node_paths=PackedStringArray("steam_controllers") instance=ExtResource("1_b0rf0")]
+script = ExtResource("2_l8duu")
+steam_controllers = []
+off_tex = ExtResource("2_1k38h")
+on_tex = ExtResource("3_u5gkn")

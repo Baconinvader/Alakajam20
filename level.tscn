@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ckr2nq16241ff"]
+[gd_scene load_steps=26 format=3 uid="uid://ckr2nq16241ff"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_0y1sb"]
 [ext_resource type="TileSet" uid="uid://b51m3uwjwepov" path="res://assets/tileset1.tres" id="1_yuro1"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ctokkk21bkg8q" path="res://entities/locked_switch.tscn" id="10_ab7jh"]
 [ext_resource type="PackedScene" uid="uid://djb5ufrqgtvgl" path="res://items/key_item.tscn" id="11_f2kht"]
 [ext_resource type="PackedScene" uid="uid://b1n68f02b02nt" path="res://entities/hook/hook_rack.tscn" id="13_8fn78"]
-[ext_resource type="PackedScene" path="res://items/meat_item.tscn" id="14_ra15v"]
+[ext_resource type="PackedScene" uid="uid://dapkrgud2vr72" path="res://items/meat_item.tscn" id="14_ra15v"]
 [ext_resource type="Texture2D" uid="uid://dovas3gvb0nmm" path="res://assets/item/meat0.png" id="15_7b0iw"]
 [ext_resource type="Texture2D" uid="uid://6gjvb62eayk4" path="res://assets/item/meat1.png" id="16_tsjsa"]
 [ext_resource type="Texture2D" uid="uid://b7jrlklsr0qij" path="res://assets/item/meat2.png" id="17_dmm31"]
@@ -22,6 +22,9 @@
 [ext_resource type="PackedScene" uid="uid://c2pyuhqci0seg" path="res://entities/serving_cart.tscn" id="20_3pk44"]
 [ext_resource type="PackedScene" uid="uid://swngtqpcj6qi" path="res://items/food_item.tscn" id="21_yp6a7"]
 [ext_resource type="PackedScene" uid="uid://b0uv7xc2liv51" path="res://entities/serving_window.tscn" id="22_abo3h"]
+[ext_resource type="PackedScene" uid="uid://cpc1o2mcvb7ey" path="res://entities/enemies/soldier.tscn" id="23_72j8s"]
+[ext_resource type="PackedScene" uid="uid://dgcgkpatpek5g" path="res://assets/barracks/steam_controller.tscn" id="24_cxy7w"]
+[ext_resource type="PackedScene" uid="uid://p1nayk7306ne" path="res://entities/stairs/valve.tscn" id="25_jt17k"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0y1sb")
@@ -141,5 +144,39 @@ key = NodePath("../key")
 position = Vector2(-456, 888)
 item_scene = ExtResource("11_f2kht")
 start_visible = false
+
+[node name="barracks_room" type="Node2D" parent="entities"]
+
+[node name="Soldier" parent="entities/barracks_room" instance=ExtResource("23_72j8s")]
+position = Vector2(816, 720)
+
+[node name="Soldier2" parent="entities/barracks_room" instance=ExtResource("23_72j8s")]
+position = Vector2(816, 944)
+
+[node name="Soldier3" parent="entities/barracks_room" instance=ExtResource("23_72j8s")]
+position = Vector2(1264, 736)
+sight_range = 256.0
+
+[node name="Soldier4" parent="entities/barracks_room" instance=ExtResource("23_72j8s")]
+position = Vector2(1264, 960)
+sight_range = 256.0
+
+[node name="steam1" parent="entities/barracks_room" instance=ExtResource("24_cxy7w")]
+position = Vector2(896, 768)
+
+[node name="steam2" parent="entities/barracks_room" instance=ExtResource("24_cxy7w")]
+position = Vector2(1160, 776)
+
+[node name="steam3" parent="entities/barracks_room" instance=ExtResource("24_cxy7w")]
+position = Vector2(904, 928)
+
+[node name="steam4" parent="entities/barracks_room" instance=ExtResource("24_cxy7w")]
+position = Vector2(1152, 928)
+
+[node name="stairs_room" type="Node2D" parent="entities"]
+
+[node name="Valve" parent="entities/stairs_room" node_paths=PackedStringArray("steam_controllers") instance=ExtResource("25_jt17k")]
+position = Vector2(1216, 424)
+steam_controllers = [NodePath("../../barracks_room/steam1"), NodePath("../../barracks_room/steam2"), NodePath("../../barracks_room/steam3"), NodePath("../../barracks_room/steam4")]
 
 [node name="explosions" type="Node2D" parent="."]

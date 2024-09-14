@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpc1o2mcvb7ey"]
+
+[ext_resource type="PackedScene" uid="uid://c8s54m60mabi0" path="res://entities/enemies/enemy.tscn" id="1_qqs4m"]
+[ext_resource type="Texture2D" uid="uid://cb2flms7ja6k7" path="res://assets/creature/soldier.png" id="2_2e38n"]
+
+[node name="Soldier" instance=ExtResource("1_qqs4m")]
+move_speed = 16.0
+is_static = true
+
+[node name="static_sprite" parent="." index="1"]
+texture = ExtResource("2_2e38n")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn8ajay1j38l7"]
+
+[ext_resource type="Script" path="res://entities/barracks/cloud.gd" id="1_ydpqe"]
+[ext_resource type="Texture2D" uid="uid://bj4pjxclgineb" path="res://assets/barracks/steam1.png" id="2_nekew"]
+
+[node name="Cloud" type="Node2D"]
+script = ExtResource("1_ydpqe")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_nekew")

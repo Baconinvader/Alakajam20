@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://main.gd" id="1_ob21i"]
 [ext_resource type="PackedScene" uid="uid://bgxxfjmnboyl8" path="res://time_manager.tscn" id="2_fatra"]
 [ext_resource type="PackedScene" uid="uid://cfgmu00qd6wr3" path="res://UI/time_view.tscn" id="3_84xl8"]
-[ext_resource type="PackedScene" path="res://UI/start_screen.tscn" id="4_felch"]
+[ext_resource type="PackedScene" uid="uid://cvbawye2bd6nr" path="res://UI/start_screen.tscn" id="4_felch"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ob21i")
