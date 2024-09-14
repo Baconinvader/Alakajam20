@@ -5,12 +5,19 @@ class_name Trap
 
 @export var trigger_time:float = 5.0
 
+## Tween that activates the trap on a timer
+var trigger_tween:Tween = null
+
 ## Override this as required, called whenever a loop reset occurs
 func reset_loop():
+	super.reset_loop()
 	if trigger_time:
-		var t:Tween = create_tween()
-		t.tween_interval(trigger_time)
-		t.tween_callback(trigger)
+		if trigger_tween:
+			trigger_tween.kill()
+			
+		trigger_tween = create_tween()
+		trigger_tween.tween_interval(trigger_time)
+		trigger_tween.tween_callback(trigger)
 	
 func _ready():
 	pass

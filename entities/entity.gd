@@ -8,7 +8,14 @@ class_name Entity
 
 ## Override this as required, called whenever a loop reset occurs
 func reset_loop():
-	pass
+	visible = true
+	$shape.disabled = false
+	
+## Override this as required, use this instead of queue_free
+## when you need to remove an object for a single loop
+func free_loop():
+	visible = false
+	$shape.disabled = true
 	
 ## Override this as required, called whenever interaction occurs
 func interact():

@@ -23,6 +23,9 @@ func _physics_process(_delta):
 		move_dir += Vector2(1.0,0.0)
 	move_dir = move_dir.normalized()
 		
+func _input(ev:InputEvent):
+	if ev.is_action_pressed("reset"):
+		g.main.reset_loop()
 		
 func reset_loop():
 	super.reset_loop()
