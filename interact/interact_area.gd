@@ -52,7 +52,7 @@ func can_interact() -> bool:
 
 ## Called during interaction
 func interact():
-	g.player.interacting = obj
+	g.interacting = obj
 	obj.interact()
 
 

@@ -1,6 +1,7 @@
 extends Entity
 
 ## Generic class for traps
+class_name Trap
 
 @export var trigger_time:float = 5.0
 

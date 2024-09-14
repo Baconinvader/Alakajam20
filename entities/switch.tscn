@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3 uid="uid://bs86fwl84ip6a"]
+
+[ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_72riq"]
+[ext_resource type="Script" path="res://entities/switch.gd" id="2_12d61"]
+[ext_resource type="Texture2D" uid="uid://blqp1a4xwvxht" path="res://assets/trap/switch_off.png" id="2_pcmtg"]
+[ext_resource type="Texture2D" uid="uid://mx8fmhd8nxcu" path="res://assets/trap/switch_on.png" id="4_0vepc"]
+[ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="5_0sdin"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oxxfq"]
+radius = 16.0
+
+[node name="Switch" instance=ExtResource("1_72riq")]
+script = ExtResource("2_12d61")
+off_tex = ExtResource("2_pcmtg")
+on_tex = ExtResource("4_0vepc")
+
+[node name="static_sprite" parent="." index="1"]
+texture = ExtResource("2_pcmtg")
+
+[node name="InteractArea" parent="." index="3" instance=ExtResource("5_0sdin")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" index="1"]
+shape = SubResource("CircleShape2D_oxxfq")

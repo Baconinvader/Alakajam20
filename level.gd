@@ -8,6 +8,11 @@ class_name Level
 ## Where to position the player
 @onready var player_spawn:Marker2D = $markers/spawn
 
+## Add explosions here
+@onready var explosions:Node2D = $explosions
+
+@onready var tiles:TileMap = $tiles
+
 ## Reset all the resetable stuff for the next loop
 func reset_loop():
 	for obj in get_tree().get_nodes_in_group("reset"):
