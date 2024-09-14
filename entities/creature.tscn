@@ -6,3 +6,4 @@
 [node name="Creature" groups=["creature"] instance=ExtResource("1_nbvfg")]
 script = ExtResource("2_0resd")
 move_speed = 96.0
+is_static = false

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1ybbcwe3jow0"]
+
+[ext_resource type="Script" path="res://items/item.gd" id="1_hrmmi"]
+[ext_resource type="Texture2D" uid="uid://bo56dqqs0h74i" path="res://assets/item/test_item.png" id="2_ukd5x"]
+
+[node name="Item" type="Node"]
+script = ExtResource("1_hrmmi")
+item_name = "test"
+tex = ExtResource("2_ukd5x")

@@ -8,6 +8,7 @@
 size = Vector2(20, 32)
 
 [node name="Gate" instance=ExtResource("1_klwj2")]
+motion_mode = 1
 script = ExtResource("2_ejk24")
 start_raised = false
 

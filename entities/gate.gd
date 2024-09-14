@@ -10,6 +10,7 @@ class_name Gate
 var raised:bool = false
 
 func _ready():
+	super._ready()
 	if switch:
 		switch.connect("on_changed", _on_switch_on_changed)
 		
@@ -22,7 +23,7 @@ func _on_switch_on_changed():
 	else:
 		lower()
 
-func loop_reset():
+func reset_loop():
 	super.reset_loop()
 	if start_raised != raised:
 		if start_raised:

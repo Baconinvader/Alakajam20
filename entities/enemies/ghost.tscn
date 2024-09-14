@@ -4,3 +4,4 @@
 
 [node name="Ghost" instance=ExtResource("1_rxljp")]
 move_speed = 16.0
+is_static = true

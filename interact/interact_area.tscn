@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://interact/interact_area.gd" id="1_2sbbb"]
 [ext_resource type="Texture2D" uid="uid://dlorxcvsogl5h" path="res://assets/interact_marker.png" id="2_3pbvn"]
 
-[node name="InteractArea" type="Area2D"]
+[node name="InteractArea" type="Area2D" groups=["interact"]]
 script = ExtResource("1_2sbbb")
 
 [node name="marker" type="Sprite2D" parent="."]
