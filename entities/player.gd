@@ -21,6 +21,8 @@ func _set_item(val:Item):
 
 func _physics_process(_delta):
 	super._physics_process(_delta)
+	if interacting:
+		return
 	
 	move_dir = Vector2(0.0,0.0)
 	if Input.is_action_pressed("move_up"):
@@ -34,6 +36,9 @@ func _physics_process(_delta):
 	move_dir = move_dir.normalized()
 		
 func _input(ev:InputEvent):
+	if interacting:
+		return
+	
 	if ev.is_action_pressed("reset"):
 		g.main.reset_loop()
 	elif ev.is_action_pressed("interact"):

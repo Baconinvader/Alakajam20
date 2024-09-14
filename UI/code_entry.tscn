@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqeqw1hgyv87w"]
+
+[ext_resource type="Script" path="res://UI/code_entry.gd" id="1_eq36d"]
+
+[node name="CodeEntry" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eq36d")
+
+[node name="entrybox" type="TextEdit" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 32.0
+
+[node name="buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 72.0
+
+[node name="confirm" type="Button" parent="buttons"]
+layout_mode = 0
+offset_right = 71.0
+offset_bottom = 32.0
+text = "Confirm"
+
+[node name="exit" type="Button" parent="buttons"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 71.0
+offset_bottom = 64.0
+text = "Exit
+"
+
+[connection signal="pressed" from="buttons/confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="buttons/exit" to="." method="_on_exit_pressed"]

@@ -1,5 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctokkk21bkg8q"]
+[gd_scene load_steps=3 format=3 uid="uid://ctokkk21bkg8q"]
 
 [ext_resource type="PackedScene" uid="uid://bs86fwl84ip6a" path="res://entities/switch.tscn" id="1_7ipi5"]
+[ext_resource type="Script" path="res://entities/locked_switch.gd" id="2_7lmj6"]
 
 [node name="LockedSwitch" instance=ExtResource("1_7ipi5")]
+script = ExtResource("2_7lmj6")
+direct_switch = false

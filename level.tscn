@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckr2nq16241ff"]
+[gd_scene load_steps=11 format=3 uid="uid://ckr2nq16241ff"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_0y1sb"]
 [ext_resource type="TileSet" uid="uid://b51m3uwjwepov" path="res://assets/tileset1.tres" id="1_yuro1"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cp5ed4vsg4ak7" path="res://entities/item_entity.tscn" id="8_hbved"]
 [ext_resource type="PackedScene" uid="uid://c02u55jp8t4ey" path="res://entities/gate.tscn" id="8_kfcc7"]
 [ext_resource type="PackedScene" uid="uid://b1ybbcwe3jow0" path="res://items/item.tscn" id="9_sdr2n"]
+[ext_resource type="PackedScene" uid="uid://ctokkk21bkg8q" path="res://entities/locked_switch.tscn" id="10_ab7jh"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0y1sb")
@@ -48,11 +49,13 @@ position = Vector2(144, 16)
 switch = NodePath("../Switch2")
 
 [node name="Ghost" parent="entities" instance=ExtResource("7_3e44d")]
-position = Vector2(328, -24)
-is_static = true
+position = Vector2(608, 64)
 
 [node name="ItemEntity" parent="entities" instance=ExtResource("8_hbved")]
 position = Vector2(56, 56)
 item_scene = ExtResource("9_sdr2n")
+
+[node name="LockedSwitch" parent="entities" instance=ExtResource("10_ab7jh")]
+position = Vector2(240, -32)
 
 [node name="explosions" type="Node2D" parent="."]

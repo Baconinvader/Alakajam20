@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6usto4503sfv"]
+
+[ext_resource type="Script" path="res://UI/entity_popup.gd" id="1_nnyrw"]
+
+[node name="EntityPopup" type="PopupPanel"]
+size = Vector2i(256, 256)
+visible = true
+script = ExtResource("1_nnyrw")

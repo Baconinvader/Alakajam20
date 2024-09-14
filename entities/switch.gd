@@ -7,6 +7,8 @@ var on:bool = false:set=_set_on
 @export var off_tex:Texture2D
 @export var on_tex:Texture2D
 
+@export var direct_switch:bool = true
+
 signal on_changed
 
 func _set_on(val:bool):
@@ -26,5 +28,6 @@ func reset_loop():
 
 func interact():
 	super.interact()
-	on = not on
+	if direct_switch:
+		on = not on
 	
