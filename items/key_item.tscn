@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://djb5ufrqgtvgl"]
+
+[ext_resource type="PackedScene" uid="uid://b1ybbcwe3jow0" path="res://items/item.tscn" id="1_wsamn"]
+[ext_resource type="Texture2D" uid="uid://n7nytarf8pn4" path="res://assets/item/key_item.png" id="2_k6xxu"]
+
+[node name="KeyItem" instance=ExtResource("1_wsamn")]
+item_name = "key"
+tex = ExtResource("2_k6xxu")

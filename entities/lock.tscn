@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://dd5rncx3e6m0e"]
+
+[ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_3ihr2"]
+[ext_resource type="Script" path="res://entities/lock.gd" id="2_tvyou"]
+[ext_resource type="Texture2D" uid="uid://cixwe2sr033jp" path="res://assets/lock.png" id="3_8jcgr"]
+[ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="3_an5ap"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3hvc3"]
+radius = 16.0
+
+[node name="Lock" instance=ExtResource("1_3ihr2")]
+script = ExtResource("2_tvyou")
+key_name = "key"
+start_collidable = false
+
+[node name="static_sprite" parent="." index="1"]
+position = Vector2(0, -32)
+texture = ExtResource("3_8jcgr")
+
+[node name="interact_area" parent="." index="3" instance=ExtResource("3_an5ap")]
+
+[node name="shape" type="CollisionShape2D" parent="interact_area" index="1"]
+shape = SubResource("CircleShape2D_3hvc3")

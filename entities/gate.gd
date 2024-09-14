@@ -5,6 +5,7 @@ extends Entity
 class_name Gate
 
 @export var switch:Switch = null
+@export var key_lock:KeyLock = null
 
 @export var start_raised:bool = false
 var raised:bool = false
@@ -13,9 +14,14 @@ func _ready():
 	super._ready()
 	if switch:
 		switch.connect("on_changed", _on_switch_on_changed)
+	if key_lock:
+		key_lock.connect("on_unlocked", _on_key_lock_unlocked)
 		
 	if start_raised:
 		raise()
+
+func _on_key_lock_unlocked():
+	raise()
 
 func _on_switch_on_changed():
 	if switch.on:

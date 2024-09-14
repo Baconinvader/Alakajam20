@@ -15,6 +15,7 @@ position = Vector2(0, -40)
 texture = ExtResource("3_rcsil")
 
 [node name="cam" type="Camera2D" parent="." index="3"]
+zoom = Vector2(2, 2)
 
 [node name="interaction_area" type="Area2D" parent="." index="4"]
 

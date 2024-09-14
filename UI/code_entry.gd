@@ -21,11 +21,16 @@ func _on_confirm_pressed():
 	
 	if code == correct_code:
 		valid = true
+		valid_code_entered.emit()
 		$entrybox.editable = false
+		exit()
 	else:
 		valid = false
 
 func _on_exit_pressed():
+	exit()
+	
+func exit():
 	if g.popup:
 		g.popup.queue_free()
 	queue_free()
