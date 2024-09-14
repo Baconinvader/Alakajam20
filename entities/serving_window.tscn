@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0uv7xc2liv51"]
+
+[ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_j26ok"]
+[ext_resource type="Script" path="res://entities/serving_window.gd" id="2_jekv1"]
+[ext_resource type="Texture2D" uid="uid://dmfvkrq7nmj4i" path="res://assets/kitchen/serving_window.png" id="2_x5221"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcg3q"]
+size = Vector2(64, 16)
+
+[node name="ServingWindow" node_paths=PackedStringArray("tables") instance=ExtResource("1_j26ok")]
+script = ExtResource("2_jekv1")
+tables = []
+
+[node name="shape" parent="." index="0"]
+shape = SubResource("RectangleShape2D_tcg3q")
+
+[node name="static_sprite" parent="." index="1"]
+texture = ExtResource("2_x5221")

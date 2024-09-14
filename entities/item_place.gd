@@ -35,6 +35,8 @@ func item_is_valid(item:Item) -> bool:
 		return false
 		
 	var matching_tag:bool = false
+	if item_tags.is_empty():
+		matching_tag = true
 	for tag:String in item_tags:
 		for item_tag:String in item.tags:
 			if item_tag == tag:

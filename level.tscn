@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ckr2nq16241ff"]
+[gd_scene load_steps=23 format=3 uid="uid://ckr2nq16241ff"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_0y1sb"]
 [ext_resource type="TileSet" uid="uid://b51m3uwjwepov" path="res://assets/tileset1.tres" id="1_yuro1"]
@@ -18,6 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://6gjvb62eayk4" path="res://assets/item/meat1.png" id="16_tsjsa"]
 [ext_resource type="Texture2D" uid="uid://b7jrlklsr0qij" path="res://assets/item/meat2.png" id="17_dmm31"]
 [ext_resource type="PackedScene" uid="uid://bj3kds81vuw5d" path="res://entities/simple_remover.tscn" id="18_j8fum"]
+[ext_resource type="PackedScene" uid="uid://bjxesqb5akb8j" path="res://entities/kitchen_table.tscn" id="19_2yruk"]
+[ext_resource type="PackedScene" uid="uid://c2pyuhqci0seg" path="res://entities/serving_cart.tscn" id="20_3pk44"]
+[ext_resource type="PackedScene" uid="uid://swngtqpcj6qi" path="res://items/food_item.tscn" id="21_yp6a7"]
+[ext_resource type="PackedScene" uid="uid://b0uv7xc2liv51" path="res://entities/serving_window.tscn" id="22_abo3h"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0y1sb")
@@ -109,5 +113,33 @@ item = NodePath("../meat2_item")
 
 [node name="wall_remover" parent="entities/torture_room" instance=ExtResource("18_j8fum")]
 position = Vector2(560, 1184)
+
+[node name="kitchen_room" type="Node2D" parent="entities"]
+
+[node name="table1" parent="entities/kitchen_room" instance=ExtResource("19_2yruk")]
+position = Vector2(496, 712)
+
+[node name="table2" parent="entities/kitchen_room" instance=ExtResource("19_2yruk")]
+position = Vector2(592, 784)
+
+[node name="table3" parent="entities/kitchen_room" instance=ExtResource("19_2yruk")]
+position = Vector2(592, 856)
+
+[node name="cart" parent="entities/kitchen_room" instance=ExtResource("20_3pk44")]
+position = Vector2(584, 960)
+
+[node name="food" parent="entities/kitchen_room" instance=ExtResource("8_hbved")]
+position = Vector2(584, 944)
+item_scene = ExtResource("21_yp6a7")
+
+[node name="serving_window" parent="entities/kitchen_room" node_paths=PackedStringArray("tables", "key") instance=ExtResource("22_abo3h")]
+position = Vector2(488, 1000)
+tables = [NodePath("../table3")]
+key = NodePath("../key")
+
+[node name="key" parent="entities/kitchen_room" instance=ExtResource("8_hbved")]
+position = Vector2(-456, 888)
+item_scene = ExtResource("11_f2kht")
+start_visible = false
 
 [node name="explosions" type="Node2D" parent="."]
