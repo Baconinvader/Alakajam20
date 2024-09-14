@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dywm5v1p34f1h"]
+
+[ext_resource type="PackedScene" uid="uid://c8s54m60mabi0" path="res://entities/enemies/enemy.tscn" id="1_rxljp"]
+
+[node name="Ghost" instance=ExtResource("1_rxljp")]
+move_speed = 16.0

@@ -1,16 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckr2nq16241ff"]
+[gd_scene load_steps=8 format=3 uid="uid://ckr2nq16241ff"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_0y1sb"]
 [ext_resource type="TileSet" uid="uid://b51m3uwjwepov" path="res://assets/tileset1.tres" id="1_yuro1"]
-[ext_resource type="PackedScene" uid="uid://c8ihcrlqeenfw" path="res://entities/test_entity.tscn" id="3_73reh"]
-[ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="4_c23bk"]
 [ext_resource type="PackedScene" uid="uid://0w02caui51wx" path="res://entities/falling_trap.tscn" id="5_rir70"]
 [ext_resource type="PackedScene" uid="uid://bs86fwl84ip6a" path="res://entities/switch.tscn" id="6_uxam2"]
+[ext_resource type="PackedScene" uid="uid://dywm5v1p34f1h" path="res://entities/enemies/ghost.tscn" id="7_3e44d"]
 [ext_resource type="PackedScene" uid="uid://bm82i4pyvuufs" path="res://entities/bomb.tscn" id="7_mqdqb"]
 [ext_resource type="PackedScene" uid="uid://c02u55jp8t4ey" path="res://entities/gate.tscn" id="8_kfcc7"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_rbxll"]
-radius = 32.0
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0y1sb")
@@ -33,22 +29,14 @@ gizmo_extents = 20.0
 
 [node name="entities" type="Node2D" parent="."]
 
-[node name="TestEntity" parent="entities" instance=ExtResource("3_73reh")]
-position = Vector2(224, 64)
-
-[node name="InteractArea" parent="entities/TestEntity" instance=ExtResource("4_c23bk")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="entities/TestEntity/InteractArea"]
-shape = SubResource("CircleShape2D_rbxll")
-
 [node name="FallingTrap" parent="entities" instance=ExtResource("5_rir70")]
 position = Vector2(128, -184)
 
 [node name="Switch" parent="entities" instance=ExtResource("6_uxam2")]
-position = Vector2(224, 144)
+position = Vector2(232, 56)
 
 [node name="Switch2" parent="entities" instance=ExtResource("6_uxam2")]
-position = Vector2(320, 32)
+position = Vector2(320, 216)
 
 [node name="Bomb" parent="entities" instance=ExtResource("7_mqdqb")]
 position = Vector2(280, 160)
@@ -56,6 +44,8 @@ position = Vector2(280, 160)
 [node name="Gate" parent="entities" node_paths=PackedStringArray("switch") instance=ExtResource("8_kfcc7")]
 position = Vector2(144, 16)
 switch = NodePath("../Switch2")
-start_raised = false
+
+[node name="Ghost" parent="entities" instance=ExtResource("7_3e44d")]
+position = Vector2(328, -24)
 
 [node name="explosions" type="Node2D" parent="."]
