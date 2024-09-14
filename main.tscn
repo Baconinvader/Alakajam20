@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqv2beh75sr15"]
+[gd_scene load_steps=4 format=3 uid="uid://bqv2beh75sr15"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_ob21i"]
+[ext_resource type="PackedScene" uid="uid://bgxxfjmnboyl8" path="res://time_manager.tscn" id="2_fatra"]
+[ext_resource type="PackedScene" uid="uid://cfgmu00qd6wr3" path="res://UI/time_view.tscn" id="3_84xl8"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ob21i")
 
+[node name="time_manager" parent="." instance=ExtResource("2_fatra")]
+
 [node name="game" type="Node2D" parent="."]
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="TimeView" parent="UI" instance=ExtResource("3_84xl8")]
