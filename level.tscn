@@ -13,11 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://ctokkk21bkg8q" path="res://entities/locked_switch.tscn" id="10_ab7jh"]
 [ext_resource type="PackedScene" uid="uid://djb5ufrqgtvgl" path="res://items/key_item.tscn" id="11_f2kht"]
 [ext_resource type="PackedScene" uid="uid://b1n68f02b02nt" path="res://entities/hook/hook_rack.tscn" id="13_8fn78"]
-[ext_resource type="PackedScene" uid="uid://dapkrgud2vr72" path="res://items/meat_item.tscn" id="14_ra15v"]
+[ext_resource type="PackedScene" path="res://items/meat_item.tscn" id="14_ra15v"]
 [ext_resource type="Texture2D" uid="uid://dovas3gvb0nmm" path="res://assets/item/meat0.png" id="15_7b0iw"]
 [ext_resource type="Texture2D" uid="uid://6gjvb62eayk4" path="res://assets/item/meat1.png" id="16_tsjsa"]
 [ext_resource type="Texture2D" uid="uid://b7jrlklsr0qij" path="res://assets/item/meat2.png" id="17_dmm31"]
-[ext_resource type="PackedScene" uid="uid://bj3kds81vuw5d" path="res://entities/simple_remover.tscn" id="18_j8fum"]
+[ext_resource type="PackedScene" path="res://entities/simple_remover.tscn" id="18_j8fum"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0y1sb")

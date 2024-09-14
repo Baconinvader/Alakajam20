@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbuo7y8ud8wl7"]
+
+[ext_resource type="Script" path="res://entities/enemies/boss.gd" id="1_5r4ac"]
+[ext_resource type="Texture2D" uid="uid://5jnx1i8e88d7" path="res://icon.svg" id="2_ny3os"]
+
+[sub_resource type="Curve2D" id="Curve2D_qmyxe"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 432, 363, 0, 0, 0, 0, 569, 307, 0, 0, 0, 0, 633, 2, 0, 0, 0, 0, 517, -164, 0, 0, 0, 0, 208, -210, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, -30, 124, 0, 0, 0, 0, -143, 379, 0, 0, 0, 0, -423, 295, 0, 0, 0, 0, -552, 102, 0, 0, 0, 0, -432, -98, 0, 0, 0, 0, -82, -155, 0, 0, 0, 0, 0, 0)
+}
+point_count = 14
+
+[sub_resource type="Curve2D" id="Curve2D_ibyol"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 956, -740, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1224, -4, 0, 0, 0, 0, -14, -19, 0, 0, 0, 0, 1077, 619, 0, 0, 0, 0, -7, -8, 0, 0, 0, 0, -1230, -4, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 8, 774, 0, 0, 0, 0, 1, 7, 0, 0, 0, 0, -1268, 679, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, -11, -733, 0, 0, 0, 0, -3, -4, 0, 0, 0, 0, -1370, -869, 0, 0, 0, 0, 1, 0)
+}
+point_count = 17
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mryjg"]
+radius = 58.0
+height = 116.0
+
+[node name="Boss" type="Node2D"]
+script = ExtResource("1_5r4ac")
+
+[node name="phaseOnePath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_qmyxe")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(7.90051, 4.90382)
+scale = Vector2(0.512336, 0.545344)
+curve = SubResource("Curve2D_ibyol")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_ny3os")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_mryjg")
