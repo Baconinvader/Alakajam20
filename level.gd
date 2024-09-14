@@ -11,4 +11,5 @@ class_name Level
 ## Reset all the resetable stuff for the next loop
 func reset_loop():
 	for obj in get_tree().get_nodes_in_group("reset"):
-		obj.reset_loop()
+		if obj.do_reset:
+			obj.reset_loop()

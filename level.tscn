@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckr2nq16241ff"]
+[gd_scene load_steps=7 format=3 uid="uid://ckr2nq16241ff"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_0y1sb"]
 [ext_resource type="TileSet" uid="uid://b51m3uwjwepov" path="res://assets/tileset1.tres" id="1_yuro1"]
-[ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="3_e5i2u"]
+[ext_resource type="PackedScene" uid="uid://c8ihcrlqeenfw" path="res://entities/test_entity.tscn" id="3_73reh"]
 [ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="4_c23bk"]
+[ext_resource type="PackedScene" uid="uid://0w02caui51wx" path="res://entities/falling_trap.tscn" id="5_rir70"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rbxll"]
 radius = 32.0
@@ -24,10 +25,13 @@ gizmo_extents = 20.0
 
 [node name="entities" type="Node2D" parent="."]
 
-[node name="Entity" parent="entities" instance=ExtResource("3_e5i2u")]
+[node name="TestEntity" parent="entities" instance=ExtResource("3_73reh")]
 position = Vector2(224, 64)
 
-[node name="InteractArea" parent="entities/Entity" instance=ExtResource("4_c23bk")]
+[node name="InteractArea" parent="entities/TestEntity" instance=ExtResource("4_c23bk")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="entities/Entity/InteractArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entities/TestEntity/InteractArea"]
 shape = SubResource("CircleShape2D_rbxll")
+
+[node name="FallingTrap" parent="entities" instance=ExtResource("5_rir70")]
+position = Vector2(96, 0)

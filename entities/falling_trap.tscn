@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://0w02caui51wx"]
+
+[ext_resource type="PackedScene" uid="uid://1hhgaevb2cbh" path="res://entities/trap.tscn" id="1_y2lc2"]
+[ext_resource type="Script" path="res://entities/falling_trap.gd" id="2_qyysa"]
+[ext_resource type="Texture2D" uid="uid://jhjr7r8u7uq3" path="res://assets/trap/fall_trap.png" id="3_3q5o7"]
+[ext_resource type="PackedScene" uid="uid://cp7ymcig4csyl" path="res://assets/trap/kill_area.tscn" id="4_8yv4h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3lqn"]
+size = Vector2(128, 48)
+
+[node name="FallingTrap" instance=ExtResource("1_y2lc2")]
+script = ExtResource("2_qyysa")
+
+[node name="static_sprite" parent="." index="1"]
+texture = ExtResource("3_3q5o7")
+
+[node name="kill_area" parent="." index="3" instance=ExtResource("4_8yv4h")]
+
+[node name="shape" type="CollisionShape2D" parent="kill_area" index="0"]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_d3lqn")

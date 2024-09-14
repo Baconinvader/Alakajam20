@@ -15,4 +15,4 @@ shape = SubResource("CircleShape2D_qijvq")
 [node name="static_sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_xbxra")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="sprite" type="Sprite2D" parent="."]

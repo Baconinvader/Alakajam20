@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://1hhgaevb2cbh"]
+
+[ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_plrlf"]
+[ext_resource type="Script" path="res://entities/trap.gd" id="2_w2knj"]
+
+[node name="Trap" instance=ExtResource("1_plrlf")]
+script = ExtResource("2_w2knj")
+trigger_time = 5.0

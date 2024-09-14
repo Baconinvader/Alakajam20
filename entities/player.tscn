@@ -9,6 +9,8 @@ radius = 32.0
 [node name="Player" instance=ExtResource("1_tq6o8")]
 script = ExtResource("2_qrmht")
 
+[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+
 [node name="cam" type="Camera2D" parent="." index="3"]
 
 [node name="interaction_area" type="Area2D" parent="." index="4"]

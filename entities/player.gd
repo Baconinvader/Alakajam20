@@ -6,6 +6,9 @@ class_name Player
 ## Area used to check if the player is in range of an object to interact with
 @onready var interaction_area = $interaction_area
 
+## Whatever we are currently interacting with
+var interacting
+
 func _physics_process(_delta):
 	super._physics_process(_delta)
 	
@@ -24,3 +27,8 @@ func _physics_process(_delta):
 func reset_loop():
 	super.reset_loop()
 	position = g.level.player_spawn.position
+
+func die():
+	super.die()
+	g.main.reset_loop()
+	

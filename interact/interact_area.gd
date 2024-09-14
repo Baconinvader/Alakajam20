@@ -48,10 +48,11 @@ func _physics_process(_delta):
 
 ## Whether the interaction conditions for this area are met
 func can_interact() -> bool:
-	return obj.can_interact()
+	return not g.player.interacting and obj.can_interact()
 
 ## Called during interaction
 func interact():
+	g.player.interacting = obj
 	obj.interact()
 
 
