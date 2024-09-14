@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvcswhrchtmcl"]
+
+[ext_resource type="PackedScene" uid="uid://dx0vrwedmtulh" path="res://tile_remover.tscn" id="2_8qcbp"]
+
+[sub_resource type="GDScript" id="GDScript_50jji"]
+script/source = "extends Node2D
+
+## Simple resettable user of TileRemover
+class_name SimpleRemover
+
+@export var width:float = 2.0
+@export var height:float = 2.0
+
+
+@onready var remover = $remover
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	$remover.width = width
+	$remover.height = height
+
+func do_removal():
+	$remover.do_removal()
+	queue_free()
+	
+func reset_loop():
+	super.reset_loop()
+	$remover.reset_loop()
+	
+	
+
+"
+
+[node name="SimpleRemover" type="Node2D"]
+script = SubResource("GDScript_50jji")
+width = null
+height = null
+
+[node name="remover" parent="." instance=ExtResource("2_8qcbp")]

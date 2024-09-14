@@ -1,5 +1,6 @@
 extends Entity
 
+@export var tile_remover:SimpleRemover
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,7 +10,7 @@ func _ready():
 ## Check for puzzle update here
 func _on_hook_placed():
 	if is_puzzle_solved():
-		pass
+		tile_remover.do_removal()
 	else:
 		pass
 	

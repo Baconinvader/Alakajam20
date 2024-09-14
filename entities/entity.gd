@@ -22,7 +22,8 @@ func _ready():
 		collision_mask = 0b00000000_00000000_00000000_00000001
 	
 func _physics_process(_delta):
-	move_and_slide()
+	if not is_static:
+		move_and_slide()
 	
 ## Override this as required, use this instead of queue_free
 ## when you need to remove an object for a single loop

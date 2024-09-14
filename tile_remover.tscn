@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://tile_remover.gd" id="1_rwh56"]
 
-[node name="TileRemover" type="Node2D"]
+[node name="TileRemover" type="Node2D" groups=["reset"]]
 script = ExtResource("1_rwh56")
