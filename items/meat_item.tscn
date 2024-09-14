@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dapkrgud2vr72"]
+
+[ext_resource type="PackedScene" uid="uid://b1ybbcwe3jow0" path="res://items/item.tscn" id="1_6wliu"]
+[ext_resource type="Texture2D" uid="uid://bxp374ominaus" path="res://assets/item/meat.png" id="2_du6mu"]
+
+[node name="MeatItem" instance=ExtResource("1_6wliu")]
+item_name = "meat"
+tex = ExtResource("2_du6mu")
+tags = Array[String](["meat"])

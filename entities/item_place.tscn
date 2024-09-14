@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckrmjvwgsemt4"]
+
+[ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_wqt27"]
+[ext_resource type="Script" path="res://entities/item_place.gd" id="2_a3573"]
+[ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="3_e55w7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fyvyw"]
+radius = 16.0
+
+[node name="ItemPlace" instance=ExtResource("1_wqt27")]
+script = ExtResource("2_a3573")
+item_name = ""
+item_tags = Array[String]([])
+can_remove = true
+
+[node name="static_sprite" parent="." index="1"]
+visible = false
+
+[node name="InteractArea" parent="." index="3" instance=ExtResource("3_e55w7")]
+
+[node name="shape" type="CollisionShape2D" parent="InteractArea" index="1"]
+shape = SubResource("CircleShape2D_fyvyw")

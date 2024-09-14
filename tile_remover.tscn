@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx0vrwedmtulh"]
+
+[ext_resource type="Script" path="res://tile_remover.gd" id="1_rwh56"]
+
+[node name="TileRemover" type="Node2D"]
+script = ExtResource("1_rwh56")

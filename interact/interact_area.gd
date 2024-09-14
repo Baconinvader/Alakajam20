@@ -66,6 +66,4 @@ func _on_area_exited(area):
 		in_range = false
 
 func _input(ev:InputEvent):
-	if player_can_interact:
-		if ev.is_action_pressed("interact"):
-			interact()
+	pass

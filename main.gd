@@ -9,13 +9,12 @@ class_name Main
 @onready var ui_layer:CanvasLayer = $UI
 
 func _ready():
-	#calling this automatically for now
-	start_game()
+	g.main = self
 
 
 ## Start the actual game loop, probably will be called when a button is pressed
 func start_game():
-	g.main = self
+	
 	g.level = load("res://level.tscn").instantiate()
 	g.player = load("res://entities/player.tscn").instantiate()
 	$game.add_child(g.level)

@@ -43,14 +43,16 @@ func _input(ev:InputEvent):
 		g.main.reset_loop()
 	elif ev.is_action_pressed("interact"):
 		var can_interact_with_anything:bool = false
-		for interact_area:InteractArea in get_tree().get_nodes_in_group("interact"):
+		var interactables:Array = get_tree().get_nodes_in_group("interact")
+		for interact_area:InteractArea in interactables:
 			if interact_area.player_can_interact:
 				can_interact_with_anything = true
+				interact_area.interact()
 				break
-			if not can_interact_with_anything:
-				if item:
-					drop_item()
-		
+		if not can_interact_with_anything:
+			if item:
+				drop_item()
+	
 func reset_loop():
 	super.reset_loop()
 	item = null

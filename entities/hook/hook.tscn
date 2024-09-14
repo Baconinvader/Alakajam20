@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cem15h82l4cki"]
+
+[ext_resource type="PackedScene" uid="uid://ckrmjvwgsemt4" path="res://entities/item_place.tscn" id="1_u65an"]
+[ext_resource type="Script" path="res://entities/hook/hook.gd" id="2_o4yoj"]
+[ext_resource type="Texture2D" uid="uid://bxawxw8n7q7gi" path="res://assets/hook.png" id="3_6wwwm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_orsyt"]
+radius = 4.0
+height = 48.0
+
+[node name="Hook" instance=ExtResource("1_u65an")]
+script = ExtResource("2_o4yoj")
+item_tags = Array[String](["meat"])
+
+[node name="hook_sprite" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_6wwwm")
+
+[node name="shape" parent="InteractArea" index="1"]
+position = Vector2(0, 24)
+shape = SubResource("CapsuleShape2D_orsyt")

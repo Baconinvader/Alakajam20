@@ -4,6 +4,7 @@ extends Node
 
 class_name Item
 
-@export var item_name:String
-@export var tex:Texture2D
+@export var item_name:String = ""
+@export var tex:Texture2D = null
+@export var tags:Array[String] = []
 

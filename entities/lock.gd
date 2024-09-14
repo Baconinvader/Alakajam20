@@ -20,4 +20,4 @@ func interact():
 	super.interact()
 	g.player.item = null
 	on_unlocked.emit()
-	queue_free()
+	free_loop()
