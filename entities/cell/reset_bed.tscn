@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://badag272tkq1f"]
+
+[ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_ou8l4"]
+[ext_resource type="Script" path="res://entities/cell/reset_bed.gd" id="2_jtd2y"]
+[ext_resource type="Texture2D" uid="uid://bcqqx5n4fptxi" path="res://assets/cell/bed.png" id="3_k11of"]
+[ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="4_8oxhj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hri4t"]
+size = Vector2(16, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya6h3"]
+size = Vector2(22, 32)
+
+[node name="ResetBed" instance=ExtResource("1_ou8l4")]
+script = ExtResource("2_jtd2y")
+
+[node name="shape" parent="." index="0"]
+shape = SubResource("RectangleShape2D_hri4t")
+
+[node name="static_sprite" parent="." index="1"]
+texture = ExtResource("3_k11of")
+
+[node name="interact_area" parent="." index="3" instance=ExtResource("4_8oxhj")]
+
+[node name="shape" type="CollisionShape2D" parent="interact_area" index="1"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ya6h3")

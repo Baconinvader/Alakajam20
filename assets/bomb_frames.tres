@@ -1,0 +1,37 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://ll0k4kepmaef"]
+
+[ext_resource type="Texture2D" uid="uid://byu77873ako62" path="res://assets/bomb.png" id="1_xjhi7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rklnb"]
+atlas = ExtResource("1_xjhi7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nryga"]
+atlas = ExtResource("1_xjhi7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svx7k"]
+atlas = ExtResource("1_xjhi7")
+region = Rect2(0, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rklnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nryga")
+}],
+"loop": true,
+"name": &"armed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svx7k")
+}],
+"loop": true,
+"name": &"disarmed",
+"speed": 5.0
+}]

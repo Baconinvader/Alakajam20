@@ -11,6 +11,10 @@ var trigger_tween:Tween = null
 ## Override this as required, called whenever a loop reset occurs
 func reset_loop():
 	super.reset_loop()
+	setup_trigger_tween()
+	
+## Create the timer to eventually set off this trap
+func setup_trigger_tween():
 	if trigger_time:
 		if trigger_tween:
 			trigger_tween.kill()

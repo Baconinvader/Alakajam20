@@ -28,6 +28,9 @@ signal on_removed
 func reset_loop():
 	super.reset_loop()
 	item = null
+	
+func reset_loop_frozen():
+	item = item
 
 ## Whether or not an item can be placed
 func item_is_valid(item:Item) -> bool:

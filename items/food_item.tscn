@@ -1,8 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://swngtqpcj6qi"]
 
 [ext_resource type="PackedScene" uid="uid://b1ybbcwe3jow0" path="res://items/item.tscn" id="1_d3llu"]
-[ext_resource type="Texture2D" uid="uid://bh6tofallkc0r" path="res://assets/kitchen/food1.png" id="2_c0hpy"]
+[ext_resource type="Texture2D" uid="uid://bh6tofallkc0r" path="res://assets/item/food1.png" id="2_6x242"]
 
 [node name="FoodItem" instance=ExtResource("1_d3llu")]
 item_name = "food"
-tex = ExtResource("2_c0hpy")
+tex = ExtResource("2_6x242")

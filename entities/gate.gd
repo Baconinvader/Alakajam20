@@ -37,6 +37,8 @@ func reset_loop():
 		else:
 			lower()
 		
+	if switch:
+		_on_switch_on_changed()
 		
 ## Raise the gate
 func raise():

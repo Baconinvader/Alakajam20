@@ -7,14 +7,13 @@
 radius = 8.0
 
 [node name="Ghost" instance=ExtResource("1_rxljp")]
-move_speed = 16.0
+sight_range = 256.0
+min_player_dist = 16.0
+move_speed = 32.0
 is_static = true
 
 [node name="shape" parent="." index="0"]
 shape = SubResource("CircleShape2D_qijvq")
-
-[node name="static_sprite" parent="." index="1"]
-texture = null
 
 [node name="sprite" parent="." index="2"]
 sprite_frames = ExtResource("2_tyety")

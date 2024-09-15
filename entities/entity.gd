@@ -36,6 +36,10 @@ func reset_loop():
 	$shape.disabled = not start_collidable
 	freed_loop = false
 	
+## Called instead of reset_loop if entity is frozen
+func reset_loop_frozen():
+	pass
+	
 func _ready():
 	if is_static:
 		collision_mask = 0b00000000_00000000_00000000_00000000
