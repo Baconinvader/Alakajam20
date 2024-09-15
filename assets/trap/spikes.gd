@@ -12,6 +12,7 @@ func reset_loop():
 
 ## Create a single spike loop
 func create_spike_tween():
+	$spike_snd.play(0.0)
 	$sprite.play()
 	
 	if spike_tween:
@@ -31,3 +32,8 @@ func create_spike_tween():
 func trigger():
 	super.trigger()
 	create_spike_tween()
+
+
+func _on_audio_stream_player_2d_finished():
+	$spike_snd.stop()
+	pass # Replace with function body.

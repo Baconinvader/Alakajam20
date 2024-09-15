@@ -1,7 +1,7 @@
-[gd_scene load_steps=40 format=3 uid="uid://ckr2nq16241ff"]
+[gd_scene load_steps=41 format=3 uid="uid://ckr2nq16241ff"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_0y1sb"]
-[ext_resource type="Material" uid="uid://phmqtxwb3egd" path="res://assets/frozen_material.tres" id="1_j68ay"]
+[ext_resource type="Material" path="res://assets/frozen_material.tres" id="1_j68ay"]
 [ext_resource type="TileSet" uid="uid://b51m3uwjwepov" path="res://assets/tileset1.tres" id="1_yuro1"]
 [ext_resource type="PackedScene" uid="uid://0w02caui51wx" path="res://entities/falling_trap.tscn" id="5_rir70"]
 [ext_resource type="PackedScene" uid="uid://bs86fwl84ip6a" path="res://entities/switch.tscn" id="6_uxam2"]
@@ -17,26 +17,27 @@
 [ext_resource type="PackedScene" uid="uid://b1n68f02b02nt" path="res://entities/hook/hook_rack.tscn" id="13_8fn78"]
 [ext_resource type="PackedScene" uid="uid://dk137hlgwb7gl" path="res://entities/big_gate.tscn" id="13_460um"]
 [ext_resource type="PackedScene" uid="uid://c1cl8755mcsq5" path="res://entities/stairs/stairs.tscn" id="14_ai51g"]
-[ext_resource type="PackedScene" uid="uid://dapkrgud2vr72" path="res://items/meat_item.tscn" id="14_ra15v"]
+[ext_resource type="PackedScene" path="res://items/meat_item.tscn" id="14_ra15v"]
 [ext_resource type="Texture2D" uid="uid://dovas3gvb0nmm" path="res://assets/item/meat0.png" id="15_7b0iw"]
 [ext_resource type="Texture2D" uid="uid://blqp1a4xwvxht" path="res://assets/trap/switch_off.png" id="15_qep45"]
 [ext_resource type="Texture2D" uid="uid://mx8fmhd8nxcu" path="res://assets/trap/switch_on.png" id="16_q4hxt"]
 [ext_resource type="Texture2D" uid="uid://6gjvb62eayk4" path="res://assets/item/meat1.png" id="16_tsjsa"]
 [ext_resource type="Texture2D" uid="uid://b7jrlklsr0qij" path="res://assets/item/meat2.png" id="17_dmm31"]
-[ext_resource type="PackedScene" uid="uid://bj3kds81vuw5d" path="res://entities/simple_remover.tscn" id="18_j8fum"]
+[ext_resource type="PackedScene" path="res://entities/simple_remover.tscn" id="18_j8fum"]
 [ext_resource type="PackedScene" uid="uid://bjxesqb5akb8j" path="res://entities/kitchen_table.tscn" id="19_2yruk"]
 [ext_resource type="PackedScene" uid="uid://c2pyuhqci0seg" path="res://entities/serving_cart.tscn" id="20_3pk44"]
 [ext_resource type="PackedScene" uid="uid://swngtqpcj6qi" path="res://items/food_item.tscn" id="21_yp6a7"]
 [ext_resource type="PackedScene" uid="uid://b0uv7xc2liv51" path="res://entities/serving_window.tscn" id="22_abo3h"]
 [ext_resource type="PackedScene" uid="uid://cpc1o2mcvb7ey" path="res://entities/enemies/soldier.tscn" id="23_72j8s"]
 [ext_resource type="PackedScene" uid="uid://dgcgkpatpek5g" path="res://assets/barracks/steam_controller.tscn" id="24_cxy7w"]
+[ext_resource type="Texture2D" uid="uid://bij3v1y0nrqro" path="res://assets/raw_meat.png" id="24_j4tqn"]
 [ext_resource type="PackedScene" uid="uid://p1nayk7306ne" path="res://entities/stairs/valve.tscn" id="25_jt17k"]
 [ext_resource type="PackedScene" uid="uid://bupox0swngrxq" path="res://entities/big_gate_side.tscn" id="26_oq67b"]
-[ext_resource type="PackedScene" uid="uid://d0xd8i71ri2is" path="res://assets/trap/spikes.tscn" id="29_ifx0h"]
+[ext_resource type="PackedScene" uid="uid://c6o6801jlht8l" path="res://assets/trap/spikes.tscn" id="29_ifx0h"]
 [ext_resource type="Texture2D" uid="uid://bq66pmvcn7rk6" path="res://assets/trap/switch_yellow_off.png" id="31_v6ujy"]
 [ext_resource type="Texture2D" uid="uid://s7ci26l2tuhb" path="res://assets/trap/switch_yellow_on.png" id="32_6cn71"]
-[ext_resource type="PackedScene" uid="uid://d2wcx7dyr24dr" path="res://assets/trap/rubble.tscn" id="33_0uhef"]
-[ext_resource type="AudioStream" uid="uid://fatu3mjteo22" path="res://assets/sound/Lost in the Dessert.wav" id="35_w3jua"]
+[ext_resource type="PackedScene" path="res://assets/trap/rubble.tscn" id="33_0uhef"]
+[ext_resource type="AudioStream" uid="uid://cc3k83jvvl1xg" path="res://assets/sound/Lost in the Dessert.wav" id="35_w3jua"]
 [ext_resource type="Texture2D" uid="uid://dqrfeap65hvkv" path="res://assets/trap/switch_blue_off.png" id="36_dwt2d"]
 [ext_resource type="Texture2D" uid="uid://752n0xe4dvxh" path="res://assets/trap/switch_blue_on.png" id="37_jrps5"]
 
@@ -57,7 +58,7 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 1, 1, 65536, 0, 2, 65536, 0, 3, 
 [node name="decor_tiles" type="TileMap" parent="."]
 tile_set = ExtResource("1_yuro1")
 format = 2
-layer_0/tile_data = PackedInt32Array(1769473, 262144, 0, 1769474, 327680, 0, 1572897, 327680, 3, 1572898, 327680, 3, 1572899, 327680, 3, 1572900, 327680, 3, 1376290, 262144, 4, 1376291, 262144, 4, 2424835, 262144, 1, 2424836, 262144, 1, 2424837, 262144, 1, 2424838, 262144, 1, 2490374, 262144, 1, 2490373, 262144, 1, 2490372, 262144, 1, 2490371, 262144, 1, 2359304, 262144, 2, 1900554, 262144, 2, 1703952, 262144, 2, 1900576, 327680, 2, 917527, 327680, 2, 196611, 393216, 1, 262146, 524288, 1, 262148, 589824, 1, 327683, 458752, 1, 131085, 458752, 2, -131062, 393216, 2, 1572893, 65536, 1, 1507357, 131072, 5, 1572896, 65536, 1, 1507360, 131072, 5, 655402, 393216, 4, 655403, 524288, 5, 720939, 524288, 4, 786475, 524288, 4, 852011, 524288, 4, 1114154, 524288, 3, 1114153, 393216, 4, 1114152, 393216, 4, 1114151, 393216, 5, 1179687, 589824, 3, 1245223, 524288, 4, 1310759, 524288, 4, 1376295, 589824, 3, 1441831, 524288, 4, 1507367, 524288, 4, 1572903, 589824, 3, 1572902, 393216, 4, 1572901, 393216, 4, 1376294, 393216, 4, 1376293, 393216, 4, 1179686, 393216, 4, 1179685, 393216, 4, 1179684, 393216, 4, 1179683, 393216, 4, 1179682, 393216, 4, 1179681, 393216, 5, 1245217, 524288, 4, 1638439, 393216, 3, 1638440, 393216, 4, 1638441, 393216, 4, 1638442, 393216, 4, 1638443, 393216, 4, 1638444, 393216, 4, 1638445, 393216, 4, 1638446, 393216, 4, 1048618, 393216, 5, 1048619, 524288, 3, 917547, 524288, 4, 983083, 524288, 4)
+layer_0/tile_data = PackedInt32Array(1769473, 262144, 0, 1769474, 327680, 0, 1572897, 327680, 3, 1572898, 327680, 3, 1572899, 327680, 3, 1572900, 327680, 3, 1376290, 262144, 4, 1376291, 262144, 4, 2424835, 262144, 1, 2424836, 262144, 1, 2424837, 262144, 1, 2424838, 262144, 1, 2490374, 262144, 1, 2490373, 262144, 1, 2490372, 262144, 1, 2490371, 262144, 1, 2359304, 262144, 2, 1900554, 262144, 2, 1703952, 262144, 2, 1900576, 327680, 2, 917527, 327680, 2, 196611, 393216, 1, 262146, 524288, 1, 262148, 589824, 1, 327683, 458752, 1, 131085, 458752, 2, -131062, 393216, 2, 1572893, 65536, 1, 1507357, 131072, 5, 1572896, 65536, 1, 1507360, 131072, 5, 655402, 393216, 4, 655403, 524288, 5, 720939, 524288, 4, 786475, 524288, 4, 852011, 524288, 4, 1114154, 524288, 3, 1114153, 393216, 4, 1114152, 393216, 4, 1114151, 393216, 5, 1179687, 589824, 3, 1245223, 524288, 4, 1310759, 524288, 4, 1376295, 589824, 3, 1441831, 524288, 4, 1507367, 524288, 4, 1572903, 589824, 3, 1572902, 393216, 4, 1572901, 393216, 4, 1376294, 393216, 4, 1376293, 393216, 4, 1179686, 393216, 4, 1179685, 393216, 4, 1179684, 393216, 4, 1179683, 393216, 4, 1179682, 393216, 4, 1179681, 393216, 5, 1245217, 524288, 4, 1638439, 393216, 3, 1638440, 393216, 4, 1638441, 393216, 4, 1638442, 393216, 4, 1638443, 393216, 4, 1638444, 393216, 4, 1638445, 393216, 4, 1638446, 393216, 4, 1048618, 393216, 5, 1048619, 524288, 3, 917547, 524288, 4, 983083, 524288, 4, 1572865, 65536, 3)
 
 [node name="markers" type="Node2D" parent="."]
 
@@ -130,6 +131,11 @@ position = Vector2(464, 184)
 
 [node name="torture_room" type="Node2D" parent="entities"]
 
+[node name="level_bg_music" type="AudioStreamPlayer" parent="entities/torture_room"]
+stream = ExtResource("35_w3jua")
+volume_db = -22.469
+pitch_scale = 0.39
+
 [node name="HookRack" parent="entities/torture_room" node_paths=PackedStringArray("tile_remover") instance=ExtResource("13_8fn78")]
 position = Vector2(416, 1040)
 tile_remover = NodePath("../wall_remover")
@@ -160,6 +166,27 @@ item = NodePath("../meat2_item")
 
 [node name="wall_remover" parent="entities/torture_room" instance=ExtResource("18_j8fum")]
 position = Vector2(560, 1184)
+
+[node name="meatclue1" type="Sprite2D" parent="entities/torture_room"]
+position = Vector2(140, 800)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("24_j4tqn")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="meatclue2" type="Sprite2D" parent="entities/torture_room"]
+position = Vector2(48, 799)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("24_j4tqn")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="meatclue3" type="Sprite2D" parent="entities/torture_room"]
+position = Vector2(114, 800)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_j4tqn")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
 
 [node name="kitchen_room" type="Node2D" parent="entities"]
 
@@ -284,8 +311,3 @@ simple_dialogue = "Looks like that opened up a shortcut."
 position = Vector2(320, 184)
 
 [node name="explosions" type="Node2D" parent="."]
-
-[node name="level_bg_music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("35_w3jua")
-volume_db = -22.469
-pitch_scale = 0.39
