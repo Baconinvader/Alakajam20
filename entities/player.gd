@@ -46,6 +46,16 @@ func get_first_interactable() -> InteractArea:
 			return can_interact_with_anything
 	return can_interact_with_anything
 		
+func get_first_freezable() -> InteractArea:
+	var can_interact_with_anything:InteractArea = null
+	var interactables:Array = get_tree().get_nodes_in_group("interact")
+	for interact_area:InteractArea in interactables:
+		if interact_area.player_can_freeze:
+			can_interact_with_anything = interact_area
+			return can_interact_with_anything
+	return can_interact_with_anything
+		
+				
 		
 func _input(ev:InputEvent):
 	if interacting:
@@ -62,7 +72,7 @@ func _input(ev:InputEvent):
 			if item:
 				drop_item()
 	elif ev.is_action_pressed("freeze"):
-		var interact_area:InteractArea = get_first_interactable()
+		var interact_area:InteractArea = get_first_freezable()
 		if interact_area:
 			var interact_obj:Entity = interact_area.obj
 			if interact_obj and interact_obj.can_freeze:

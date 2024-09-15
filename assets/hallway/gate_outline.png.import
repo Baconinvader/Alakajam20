@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2xcfw53kilsp"
-path="res://.godot/imported/hanging_meat.png-2c6fb1e486575f4a218daf763c5d6088.ctex"
+uid="uid://d2bv6eufmhmti"
+path="res://.godot/imported/gate_outline.png-22321eed7ef90b7635de7c32b37fa3dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hanging_meat.png"
-dest_files=["res://.godot/imported/hanging_meat.png-2c6fb1e486575f4a218daf763c5d6088.ctex"]
+source_file="res://assets/hallway/gate_outline.png"
+dest_files=["res://.godot/imported/gate_outline.png-22321eed7ef90b7635de7c32b37fa3dd.ctex"]
 
 [params]
 

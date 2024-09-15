@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwiv6vs3skcq1"
-path="res://.godot/imported/gate.png-2f3896339d527e221c36b255ce052f75.ctex"
+uid="uid://2hclp5snbh0m"
+path="res://.godot/imported/chomsky.png-ba40833c1bef89558b122505308e4fb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gate.png"
-dest_files=["res://.godot/imported/gate.png-2f3896339d527e221c36b255ce052f75.ctex"]
+source_file="res://assets/fonts/chomsky.png"
+dest_files=["res://.godot/imported/chomsky.png-ba40833c1bef89558b122505308e4fb4.ctex"]
 
 [params]
 
