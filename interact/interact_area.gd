@@ -24,13 +24,26 @@ func _set_player_can_interact(val:bool):
 			$marker.visible = true
 		else:
 			$marker.visible = false
-
+			
+var player_can_freeze:bool = false:set=_set_player_can_freeze
+func _set_player_can_freeze(val:bool):
+	player_can_freeze = val
+	if player_can_freeze and not player_can_interact:
+		$freeze_marker.visible = true
+	else:
+		$freeze_marker.visible = false
+		
 ## Makes the marker go up and down
 func create_move_marker_tween():
 	var t:Tween = create_tween()
 	t.tween_property($marker, "position:y", marker_offset + 16, marker_move_time*0.5)
 	t.tween_property($marker, "position:y", marker_offset + -16, marker_move_time*0.5)
 	t.tween_callback(create_move_marker_tween)
+	
+	var t2:Tween = create_tween()
+	t2.tween_property($freeze_marker, "position:y", marker_offset + 16, marker_move_time*0.5)
+	t2.tween_property($freeze_marker, "position:y", marker_offset + -16, marker_move_time*0.5)
+	
 
 func _ready():
 	$marker.visible = false
@@ -43,12 +56,25 @@ func _physics_process(_delta):
 			player_can_interact = true
 		else:
 			player_can_interact = false
+			
+		if can_freeze():
+			player_can_freeze = true
+		else:
+			player_can_freeze = false
 	else:
 		player_can_interact = false
+		player_can_freeze = false
+		
+	
 
 ## Whether the interaction conditions for this area are met
 func can_interact() -> bool:
 	return not g.player.interacting and obj.can_interact()
+
+func can_freeze() -> bool:
+	return not g.player.interacting and obj.can_freeze()
+
+
 
 ## Called during interaction
 func interact():

@@ -42,16 +42,24 @@ func reset_loop():
 		
 ## Raise the gate
 func raise():
-	visible = false
+	$static_sprite.visible = false
+	#visible = false
 	$shape.disabled = true
 	raised = true
 	
 ## Lower the gate():
 func lower():
-	visible = true
+	$static_sprite.visible = true
+	#visible = true
 	$shape.disabled = false
 	raised = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func can_interact():
+	return false
+	
+func can_freeze():
+	return true

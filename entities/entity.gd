@@ -13,7 +13,7 @@ class_name Entity
 var frozen_mat:ShaderMaterial = preload("res://assets/frozen_material.tres")
 
 ## Permanence mechanic
-@export var can_freeze:bool = true
+#@export var can_freeze:bool = true
 var frozen:bool = false:set=_set_frozen
 func _set_frozen(val:bool):
 	frozen = val
@@ -61,7 +61,10 @@ func free_loop():
 func interact():
 	pass
 	
-## Override this as required, checks if this object
+## Override this as required, checks if this object can be interacted with
 func can_interact() -> bool:
 	return true
 
+### Override this as required if differs from can_interact
+func can_freeze() -> bool:
+	return can_interact()

@@ -1,15 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bupox0swngrxq"]
+[gd_scene load_steps=5 format=3 uid="uid://bupox0swngrxq"]
 
 [ext_resource type="PackedScene" uid="uid://c02u55jp8t4ey" path="res://entities/gate.tscn" id="1_0o6hh"]
-[ext_resource type="Texture2D" uid="uid://c1yg33q2ov2kg" path="res://assets/big_gate_side.png" id="2_6m6oy"]
+[ext_resource type="Texture2D" uid="uid://byiys25615mgw" path="res://assets/hallway/big_gate_side_outline.png" id="2_w5n7y"]
+[ext_resource type="Texture2D" uid="uid://c1yg33q2ov2kg" path="res://assets/hallway/big_gate_side.png" id="3_xhqxb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0u5i"]
 size = Vector2(16, 64)
 
 [node name="BigGateSide" instance=ExtResource("1_0o6hh")]
 
-[node name="shape" parent="." index="0"]
+[node name="outline" parent="." index="0"]
+texture = ExtResource("2_w5n7y")
+
+[node name="shape" parent="." index="1"]
 shape = SubResource("RectangleShape2D_r0u5i")
 
-[node name="static_sprite" parent="." index="1"]
-texture = ExtResource("2_6m6oy")
+[node name="static_sprite" parent="." index="2"]
+texture = ExtResource("3_xhqxb")
