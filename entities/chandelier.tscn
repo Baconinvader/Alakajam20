@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhooy5wobkkum"]
+
+[ext_resource type="Script" path="res://chandelier.gd" id="1_x17dl"]
+[ext_resource type="Texture2D" uid="uid://tfiqvr2eppne" path="res://chandelier.png" id="2_xpewc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u7xd"]
+size = Vector2(323, 88)
+
+[node name="chandelier" type="Node2D"]
+script = ExtResource("1_x17dl")
+
+[node name="main" type="Sprite2D" parent="."]
+position = Vector2(-3, -782)
+texture = ExtResource("2_xpewc")
+
+[node name="shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 2)
+scale = Vector2(1, 0.153509)
+texture = ExtResource("2_xpewc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5.5, -2)
+shape = SubResource("RectangleShape2D_3u7xd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
