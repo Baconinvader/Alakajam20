@@ -12,15 +12,20 @@ func _set_enabled(val:bool):
 	set_deferred("monitoring",enabled)
 
 	#pass
-	print(enabled," ",monitoring)
+	#print(enabled," ",monitoring)
 
 func _on_body_entered(body):
 	if get_parent() is Entity and get_parent().freed_loop:
 		return
+	if not enabled:
+		return
+		
+	if g.time_manager.steps_since_reset < 2:
+		return
 		
 	if kill_player:
 		if body == g.player:
-			g.player.die()
+			g.player.die_start()
 	if kill_enemy:
 		if body is Enemy:
-			body.die()
+			body.die_start()

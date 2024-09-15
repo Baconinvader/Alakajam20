@@ -21,7 +21,7 @@ func _set_item(val:Item):
 
 func _physics_process(_delta):
 	super._physics_process(_delta)
-	if interacting:
+	if interacting or dying:
 		move_dir = Vector2.ZERO
 		return
 	

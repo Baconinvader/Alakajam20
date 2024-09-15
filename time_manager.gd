@@ -6,6 +6,8 @@ class_name TimeManager
 
 var do_reset:bool = true
 
+var steps_since_reset:int = 0
+
 var time:float:get=_get_time
 func _get_time() -> float:
 	return $timer.time_left
@@ -18,8 +20,11 @@ func _set_max_time(val:float):
 	if $timer:
 		$timer.wait_time = max_time
 
+func _physics_process(_delta):
+	steps_since_reset += 1
 
 func reset_loop():
+	steps_since_reset = 0
 	$timer.start()
 	
 

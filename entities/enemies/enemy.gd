@@ -69,4 +69,4 @@ func _on_nav_navigation_finished():
 
 func _on_attack_area_body_entered(body):
 	if body == g.player:
-		g.player.die()
+		g.player.die_start()
