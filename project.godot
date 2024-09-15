@@ -36,6 +36,12 @@ project/assembly_name="Alakajam 20"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://assets/sound/": "teal"
+}
+
 [input]
 
 move_up={

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvbawye2bd6nr"]
+[gd_scene load_steps=6 format=3 uid="uid://c3ef305fisup0"]
 
 [ext_resource type="Script" path="res://UI/start_screen.gd" id="1_1l320"]
 [ext_resource type="Texture2D" uid="uid://vwfbecwj125x" path="res://assets/ui/start_screen.png" id="2_7rrch"]
-[ext_resource type="SpriteFrames" uid="uid://qgsgq7rfmy5s" path="res://assets/ui/title_frames.tres" id="3_facrv"]
+[ext_resource type="SpriteFrames" uid="uid://dedcflouhju01" path="res://assets/ui/title_frames.tres" id="3_facrv"]
+[ext_resource type="AudioStream" uid="uid://bivd13iqj4lsq" path="res://assets/sound/Warmth.wav" id="4_o2yrq"]
+[ext_resource type="Texture2D" uid="uid://cn1uqkgnimli0" path="res://assets/title_text.png" id="5_odepn"]
 
 [node name="StartScreen" type="Control"]
 layout_mode = 3
@@ -25,6 +27,12 @@ scale = Vector2(1.35, 1.35)
 sprite_frames = ExtResource("3_facrv")
 frame_progress = 0.514511
 
+[node name="title" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("5_odepn")
+
 [node name="buttons" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
@@ -37,5 +45,11 @@ offset_top = 456.0
 offset_right = 590.0
 offset_bottom = 487.0
 text = "Start"
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_o2yrq")
+volume_db = -30.918
+pitch_scale = 0.68
+autoplay = true
 
 [connection signal="pressed" from="buttons/start" to="." method="_on_start_pressed"]
