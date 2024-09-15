@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0xd8i71ri2is"]
+
+[ext_resource type="PackedScene" uid="uid://1hhgaevb2cbh" path="res://entities/trap.tscn" id="1_1gyx0"]
+[ext_resource type="Script" path="res://assets/trap/spikes.gd" id="2_bttfo"]
+[ext_resource type="SpriteFrames" uid="uid://klqsu55n114c" path="res://assets/trap/spike_frames.tres" id="3_ss0rn"]
+[ext_resource type="PackedScene" uid="uid://cp7ymcig4csyl" path="res://assets/trap/kill_area.tscn" id="4_nfd7y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ui050"]
+size = Vector2(32, 28)
+
+[node name="Spikes" instance=ExtResource("1_1gyx0")]
+script = ExtResource("2_bttfo")
+start_collidable = false
+
+[node name="sprite" parent="." index="2"]
+sprite_frames = ExtResource("3_ss0rn")
+animation = &"spike"
+
+[node name="kill_area" parent="." index="3" instance=ExtResource("4_nfd7y")]
+
+[node name="shape" type="CollisionShape2D" parent="kill_area" index="0"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_ui050")

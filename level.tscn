@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://ckr2nq16241ff"]
+[gd_scene load_steps=30 format=3 uid="uid://ckr2nq16241ff"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_0y1sb"]
 [ext_resource type="Material" uid="uid://phmqtxwb3egd" path="res://assets/frozen_material.tres" id="1_j68ay"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://cpc1o2mcvb7ey" path="res://entities/enemies/soldier.tscn" id="23_72j8s"]
 [ext_resource type="PackedScene" uid="uid://dgcgkpatpek5g" path="res://assets/barracks/steam_controller.tscn" id="24_cxy7w"]
 [ext_resource type="PackedScene" uid="uid://p1nayk7306ne" path="res://entities/stairs/valve.tscn" id="25_jt17k"]
+[ext_resource type="PackedScene" uid="uid://d0xd8i71ri2is" path="res://assets/trap/spikes.tscn" id="29_ifx0h"]
 
 [node name="Level" type="Node2D"]
 material = ExtResource("1_j68ay")
@@ -192,5 +193,19 @@ position = Vector2(1152, 928)
 [node name="Valve" parent="entities/stairs_room" node_paths=PackedStringArray("steam_controllers") instance=ExtResource("25_jt17k")]
 position = Vector2(1216, 424)
 steam_controllers = [NodePath("../../barracks_room/steam1"), NodePath("../../barracks_room/steam2"), NodePath("../../barracks_room/steam3"), NodePath("../../barracks_room/steam4")]
+
+[node name="cell_room" type="Node2D" parent="entities"]
+
+[node name="spikes1" parent="entities/cell_room" instance=ExtResource("29_ifx0h")]
+position = Vector2(304, 32)
+trigger_time = 1.0
+
+[node name="spikes2" parent="entities/cell_room" instance=ExtResource("29_ifx0h")]
+position = Vector2(304, 64)
+trigger_time = 2.0
+
+[node name="spikes3" parent="entities/cell_room" instance=ExtResource("29_ifx0h")]
+position = Vector2(304, 96)
+trigger_time = 3.0
 
 [node name="explosions" type="Node2D" parent="."]
