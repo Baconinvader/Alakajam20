@@ -10,6 +10,21 @@ class_name Entity
 @export var start_visible:bool = true
 @export var is_static:bool = true
 
+var frozen_mat:ShaderMaterial = preload("res://assets/frozen_material.tres")
+
+## Permanence mechanic
+@export var can_freeze:bool = true
+var frozen:bool = false:set=_set_frozen
+func _set_frozen(val:bool):
+	frozen = val
+	if frozen:
+		$static_sprite.material = frozen_mat
+		$sprite.material = frozen_mat
+	else:
+		$static_sprite.material = null
+		$sprite.material = null
+		
+
 ## Whether this object has been "freed" this loop, like queue_free but reversible
 var freed_loop:bool = false
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://ckr2nq16241ff"]
+[gd_scene load_steps=29 format=3 uid="uid://ckr2nq16241ff"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_0y1sb"]
+[ext_resource type="Material" uid="uid://phmqtxwb3egd" path="res://assets/frozen_material.tres" id="1_j68ay"]
 [ext_resource type="TileSet" uid="uid://b51m3uwjwepov" path="res://assets/tileset1.tres" id="1_yuro1"]
 [ext_resource type="PackedScene" uid="uid://0w02caui51wx" path="res://entities/falling_trap.tscn" id="5_rir70"]
 [ext_resource type="PackedScene" uid="uid://bs86fwl84ip6a" path="res://entities/switch.tscn" id="6_uxam2"]
@@ -29,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://p1nayk7306ne" path="res://entities/stairs/valve.tscn" id="25_jt17k"]
 
 [node name="Level" type="Node2D"]
+material = ExtResource("1_j68ay")
 script = ExtResource("1_0y1sb")
 
 [node name="floor_tiles" type="TileMap" parent="."]

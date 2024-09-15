@@ -9,4 +9,5 @@ script = ExtResource("2_ysen2")
 trigger_time = 2.0
 
 [node name="static_sprite" parent="." index="1"]
+material = null
 texture = ExtResource("2_grflb")

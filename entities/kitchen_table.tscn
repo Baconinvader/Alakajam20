@@ -15,6 +15,7 @@ item_name = "food"
 texture = ExtResource("2_kuj1r")
 
 [node name="static_sprite" parent="." index="2"]
+material = null
 texture = ExtResource("2_kuj1r")
 
 [node name="shape" parent="InteractArea" index="1"]

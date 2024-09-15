@@ -12,4 +12,5 @@ size = Vector2(64, 64)
 shape = SubResource("RectangleShape2D_7s7j5")
 
 [node name="static_sprite" parent="." index="1"]
+material = null
 texture = ExtResource("2_fb8b8")

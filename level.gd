@@ -24,4 +24,10 @@ class_name Level
 func reset_loop():
 	for obj in get_tree().get_nodes_in_group("reset"):
 		if obj.do_reset:
-			obj.reset_loop()
+			if "frozen" in obj:
+				if obj.frozen:
+					obj.frozen = false
+				else:
+					obj.reset_loop()
+			else:
+				obj.reset_loop()
