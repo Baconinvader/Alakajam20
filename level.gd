@@ -35,3 +35,10 @@ func reset_loop():
 					obj.reset_loop()
 			else:
 				obj.reset_loop()
+				
+	#softlock prevention, bit of a hack
+	var valve:Valve = $entities/stairs_room/valve
+	var side_gate:Gate = $entities/hallways/side_gate
+	if not side_gate.raised and valve.on:
+		valve.frozen = false
+		valve.on = false

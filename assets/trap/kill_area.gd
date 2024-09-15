@@ -9,7 +9,9 @@ class_name KIllArea
 
 func _set_enabled(val:bool):
 	enabled = val
-	set_deferred("monitoring",enabled)
+	var cpy = enabled
+	monitoring = cpy
+	set_deferred("monitoring",cpy)
 
 	#pass
 	#print(enabled," ",monitoring)
