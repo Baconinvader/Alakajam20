@@ -13,6 +13,7 @@ func _ready():
 ## Check for puzzle update here
 func _on_table_placed():
 	if is_puzzle_solved():
+		d.basic_dialogue("Looks like that's all of them.")
 		key.position = position
 		key.visible = true
 	else:

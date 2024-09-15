@@ -34,6 +34,7 @@ func reset_loop_frozen():
 ## Check for puzzle update here
 func _on_hook_placed():
 	if is_puzzle_solved():
+		d.basic_dialogue("Looks like placing them in the correct order opened something up.")
 		tile_remover.do_removal()
 	else:
 		pass

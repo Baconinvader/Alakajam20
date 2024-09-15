@@ -68,7 +68,7 @@ layer_0/tile_data = PackedInt32Array(1769473, 262144, 0, 1769474, 327680, 0, 157
 [node name="markers" type="Node2D" parent="."]
 
 [node name="spawn" type="Marker2D" parent="markers"]
-position = Vector2(120, 872)
+position = Vector2(420, 1168)
 gizmo_extents = 20.0
 
 [node name="entities" type="Node2D" parent="."]
@@ -210,7 +210,6 @@ position = Vector2(592, 712)
 
 [node name="table3" parent="entities/kitchen_room" instance=ExtResource("19_2yruk")]
 position = Vector2(592, 776)
-simple_dialogue = ""
 
 [node name="cart" parent="entities/kitchen_room" instance=ExtResource("20_3pk44")]
 position = Vector2(600, 888)
@@ -218,10 +217,12 @@ position = Vector2(600, 888)
 [node name="food" parent="entities/kitchen_room" instance=ExtResource("8_hbved")]
 position = Vector2(600, 872)
 item_scene = ExtResource("21_yp6a7")
+simple_dialogue = "I feel strangely compelled to serve food to all the tables...
+But there's only one plate..."
 
 [node name="serving_window" parent="entities/kitchen_room" node_paths=PackedStringArray("tables", "key") instance=ExtResource("22_abo3h")]
 position = Vector2(480, 968)
-tables = [NodePath("../table3")]
+tables = [NodePath("../table3"), NodePath("../table2"), NodePath("../table1")]
 key = NodePath("../key")
 
 [node name="key" parent="entities/kitchen_room" instance=ExtResource("8_hbved")]
@@ -297,7 +298,6 @@ item_name = "k_key"
 [node name="ghost2" parent="entities/hallways" instance=ExtResource("7_3e44d")]
 position = Vector2(312, 872)
 sight_range = 200.0
-move_speed = 0.0
 
 [node name="barracks_gate" parent="entities/hallways" node_paths=PackedStringArray("key_lock") instance=ExtResource("13_460um")]
 position = Vector2(1024, 1056)
