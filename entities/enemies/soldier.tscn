@@ -12,7 +12,7 @@ radius = 12.0
 [node name="Soldier" instance=ExtResource("1_qqs4m")]
 sight_range = 256.0
 min_player_dist = 16.0
-move_speed = 86.0
+move_speed = 72.0
 is_static = true
 
 [node name="shape" parent="." index="0"]
