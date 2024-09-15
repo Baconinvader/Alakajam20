@@ -13,15 +13,20 @@ var explosion_time:float = 0.5
 func _ready():
 	remover.radius = radius
 	$sprite.visible = true
-	$kill_area/shape.shape.radius = radius
+	$kill_area/shape.shape.radius = radius*32.0
 	$kill_area.enabled = false
 
 	
 ## Actually handle the results of the explosion
 func do_explosion():
+	var dist:float = position.distance_to(g.player.position)
+	if dist <= radius*32.0:
+		g.player.die_start()
+		
 	var t:Tween = create_tween()
-	t.tween_property($kill_area, "enabled", true, explosion_time*0.25)
-	t.tween_property($kill_area, "enabled", false, explosion_time*0.75)
+	#t.tween_property($kill_area, "enabled", true, explosion_time*0.25)
+	#t.tween_property($kill_area, "enabled", false, explosion_time*0.75)
+	t.tween_interval(explosion_time)
 	$remover.do_removal()
 	$sprite.play()
 	
