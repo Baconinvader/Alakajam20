@@ -9,7 +9,10 @@ class_name SteamController
 func _set_active(val:bool):
 	active = val
 	if active:
+		$kill_area.enabled = true
 		add_clouds()
+	else:
+		$kill_area.enabled = false
 
 @export var kill_radius:float = 128.0
 @export var spawn_radius:float = 96.0

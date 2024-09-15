@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4vaorfqq7jsm"]
+
+[ext_resource type="Script" path="res://UI/win_screen.gd" id="1_4gr4i"]
+[ext_resource type="Texture2D" uid="uid://biid5wnmgcb1y" path="res://assets/ui/win_screen.png" id="2_oju18"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4gr4i")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_oju18")
+
+[node name="buttons" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="menu" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 456.0
+offset_right = 590.0
+offset_bottom = 487.0
+text = "Menu
+"
+
+[connection signal="pressed" from="buttons/menu" to="." method="_on_menu_pressed"]

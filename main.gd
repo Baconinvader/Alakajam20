@@ -10,15 +10,32 @@ class_name Main
 
 func _ready():
 	g.main = self
+	add_start_screen()
 
-
-## Start the actual game loop, probably will be called when a button is pressed
-func start_game():
-	
+## Fully reset player/level
+func reset():
+	if g.level:
+		g.level.queue_free()
+	if g.player:
+		g.player.queue_free()
 	g.level = load("res://level.tscn").instantiate()
 	g.player = load("res://entities/player.tscn").instantiate()
 	$game.add_child(g.level)
 	g.level.add_child(g.player)
+
+## Create start screen
+func add_start_screen():
+	var start_screen:StartScreen = load("res://UI/start_screen.tscn").instantiate()
+	ui_layer.add_child(start_screen)
+	
+## Create win screen
+func add_win_screen():
+	var win_screen:WinScreen = load("res://UI/win_screen.tscn").instantiate()
+	ui_layer.add_child(win_screen)
+
+## Start the actual game loop, probably will be called when a button is pressed
+func start_game():
+	reset()
 	reset_loop()
 	
 ## Reset everything

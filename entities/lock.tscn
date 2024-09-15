@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="3_an5ap"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3hvc3"]
-radius = 16.0
+radius = 32.0
 
 [node name="Lock" instance=ExtResource("1_3ihr2")]
 script = ExtResource("2_tvyou")
