@@ -80,7 +80,19 @@ position = Vector2(304, 32)
 trigger_time = 1.0
 
 [node name="spikes2" parent="entities/cell_room" instance=ExtResource("29_ifx0h")]
-position = Vector2(304, 64)
+position = Vector2(335, 60)
+trigger_time = 2.0
+
+[node name="spikes3" parent="entities/cell_room" instance=ExtResource("29_ifx0h")]
+position = Vector2(304, 103)
+trigger_time = 2.0
+
+[node name="spikes4" parent="entities/cell_room" instance=ExtResource("29_ifx0h")]
+position = Vector2(335, 239)
+trigger_time = 2.0
+
+[node name="spikes5" parent="entities/cell_room" instance=ExtResource("29_ifx0h")]
+position = Vector2(303, 212)
 trigger_time = 2.0
 
 [node name="uu_falling_trap" parent="entities/cell_room" instance=ExtResource("5_rir70")]
@@ -88,7 +100,6 @@ position = Vector2(-416, -376)
 
 [node name="switch2" parent="entities/cell_room" instance=ExtResource("6_uxam2")]
 position = Vector2(336, -80)
-simple_dialogue = "Looks like that opened up the room on the right"
 
 [node name="switch1" parent="entities/cell_room" instance=ExtResource("6_uxam2")]
 position = Vector2(432, 48)
@@ -132,7 +143,7 @@ off_tex = ExtResource("15_qep45")
 on_tex = ExtResource("16_q4hxt")
 
 [node name="ghost1" parent="entities" instance=ExtResource("7_3e44d")]
-position = Vector2(464, 184)
+position = Vector2(462, 237)
 
 [node name="torture_room" type="Node2D" parent="entities"]
 
@@ -227,7 +238,7 @@ key_lock = NodePath("lock")
 lock = NodePath("lock")
 
 [node name="lock" parent="entities/kitchen_room/side_gate" instance=ExtResource("7_ro32p")]
-key_name = "key_kitchen"
+key_name = "k_key"
 
 [node name="barracks_room" type="Node2D" parent="entities"]
 
@@ -279,15 +290,17 @@ steam_controllers = [NodePath("../../barracks_room/steam1"), NodePath("../../bar
 [node name="key_item_entity" parent="entities/office_room" node_paths=PackedStringArray("item") instance=ExtResource("8_hbved")]
 position = Vector2(72, 888)
 item = NodePath("../key")
-simple_dialogue = "Looks like this key opens up the room on the right."
+simple_dialogue = "the words \"Dining Hall\" are engraved on the key"
 
 [node name="key" parent="entities/office_room" instance=ExtResource("11_f2kht")]
-item_name = "key_kitchen"
+item_name = "k_key"
 
 [node name="hallways" type="Node2D" parent="entities"]
 
 [node name="ghost2" parent="entities/hallways" instance=ExtResource("7_3e44d")]
 position = Vector2(312, 872)
+sight_range = 200.0
+move_speed = 25.0
 
 [node name="barracks_gate" parent="entities/hallways" node_paths=PackedStringArray("key_lock", "lock") instance=ExtResource("13_460um")]
 position = Vector2(1024, 1056)
