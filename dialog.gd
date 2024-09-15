@@ -13,5 +13,15 @@ func _on_timeline_started():
 func _on_timeline_ended():
 	g.player.interacting = null
 
+func basic_dialogue(text:String):
+	if text.is_empty():
+		return
+		
+	var events: Array = text.split('\n')
+
+	var timeline : DialogicTimeline = DialogicTimeline.new()
+	timeline.events = events
+	Dialogic.start(timeline)
+
 func _process(delta):
 	pass

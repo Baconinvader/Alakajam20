@@ -30,6 +30,7 @@ func reset_loop():
 		queue_free()
 		
 func interact():
+	super.interact()
 	if g.player.item:
 		g.player.drop_item()
 	g.player.item = item

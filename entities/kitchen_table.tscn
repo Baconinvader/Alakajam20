@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjxesqb5akb8j"]
+[gd_scene load_steps=6 format=3 uid="uid://bjxesqb5akb8j"]
 
 [ext_resource type="PackedScene" uid="uid://ckrmjvwgsemt4" path="res://entities/item_place.tscn" id="1_eqckk"]
 [ext_resource type="Texture2D" uid="uid://wnnq0c72otdn" path="res://assets/kitchen/kitchen_table.png" id="2_kuj1r"]
 [ext_resource type="Script" path="res://entities/kitchen_table.gd" id="2_ttu5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo450"]
+size = Vector2(48, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nl43"]
 size = Vector2(96, 64)
@@ -10,6 +13,10 @@ size = Vector2(96, 64)
 [node name="KitchenTable" instance=ExtResource("1_eqckk")]
 script = ExtResource("2_ttu5q")
 item_name = "food"
+simple_dialogue = "Placed the food on the table..."
+
+[node name="shape" parent="." index="0"]
+shape = SubResource("RectangleShape2D_mo450")
 
 [node name="table_sprite" type="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_kuj1r")

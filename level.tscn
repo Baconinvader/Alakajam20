@@ -57,7 +57,7 @@ layer_0/tile_data = PackedInt32Array(1769473, 262144, 0, 1769474, 327680, 0, 157
 [node name="markers" type="Node2D" parent="."]
 
 [node name="spawn" type="Marker2D" parent="markers"]
-position = Vector2(112, 144)
+position = Vector2(1256, 424)
 gizmo_extents = 20.0
 
 [node name="entities" type="Node2D" parent="."]
@@ -77,9 +77,11 @@ position = Vector2(-416, -376)
 
 [node name="switch2" parent="entities/cell_room" instance=ExtResource("6_uxam2")]
 position = Vector2(336, -80)
+simple_dialogue = "Looks like that opened up the room on the right"
 
 [node name="switch1" parent="entities/cell_room" instance=ExtResource("6_uxam2")]
 position = Vector2(432, 48)
+simple_dialogue = "I heard the gate to my room open... but now the gate to this room is closed!"
 
 [node name="bomb" parent="entities/cell_room" node_paths=PackedStringArray("rubble") instance=ExtResource("7_mqdqb")]
 position = Vector2(240, 152)
@@ -89,9 +91,10 @@ rubble = NodePath("../../hallways/rubble")
 position = Vector2(144, 16)
 switch = NodePath("../switch1")
 
-[node name="gate2" parent="entities/cell_room" node_paths=PackedStringArray("switch") instance=ExtResource("8_kfcc7")]
+[node name="gate2" parent="entities/cell_room" node_paths=PackedStringArray("switch", "anti_switch") instance=ExtResource("8_kfcc7")]
 position = Vector2(464, 48)
 switch = NodePath("../switch2")
+anti_switch = NodePath("../switch1")
 
 [node name="ResetBed" parent="entities/cell_room" instance=ExtResource("9_l4oru")]
 position = Vector2(56, 104)
@@ -169,6 +172,8 @@ position = Vector2(600, 888)
 [node name="food" parent="entities/kitchen_room" instance=ExtResource("8_hbved")]
 position = Vector2(600, 872)
 item_scene = ExtResource("21_yp6a7")
+simple_dialogue = "I feel compelled to put the food on all the tables...
+But there's only one plate's worth here!"
 
 [node name="serving_window" parent="entities/kitchen_room" node_paths=PackedStringArray("tables", "key") instance=ExtResource("22_abo3h")]
 position = Vector2(480, 968)
@@ -228,6 +233,7 @@ steam_controllers = [NodePath("../../barracks_room/steam1"), NodePath("../../bar
 [node name="key_item_entity" parent="entities/office_room" node_paths=PackedStringArray("item") instance=ExtResource("8_hbved")]
 position = Vector2(72, 888)
 item = NodePath("../key")
+simple_dialogue = "Looks like this key opens up the room on the right."
 
 [node name="key" parent="entities/office_room" instance=ExtResource("11_f2kht")]
 item_name = "key_kitchen"
@@ -250,6 +256,7 @@ position = Vector2(200, -816)
 [node name="side_gate" parent="entities/hallways" node_paths=PackedStringArray("switch") instance=ExtResource("26_oq67b")]
 position = Vector2(384, 480)
 switch = NodePath("../gate_switch")
+simple_dialogue = "Looks like it's locked from the other side..."
 
 [node name="gate_switch" parent="entities/hallways" instance=ExtResource("6_uxam2")]
 position = Vector2(464, 432)
