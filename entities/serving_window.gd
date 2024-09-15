@@ -13,7 +13,7 @@ func _ready():
 ## Check for puzzle update here
 func _on_table_placed():
 	if is_puzzle_solved():
-		d.basic_dialogue("Looks like that's all of them.")
+		d.basic_dialogue("Looks like a key appeared.")
 		key.position = position
 		key.visible = true
 	else:
@@ -22,9 +22,9 @@ func _on_table_placed():
 ## Has the food been placed correctly
 func is_puzzle_solved() -> bool:
 	for table:KitchenTable in tables:
-		if not table.item:
-			return false
-	return true
+		if table.item:
+			return true
+	return false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -217,8 +217,7 @@ position = Vector2(600, 888)
 [node name="food" parent="entities/kitchen_room" instance=ExtResource("8_hbved")]
 position = Vector2(600, 872)
 item_scene = ExtResource("21_yp6a7")
-simple_dialogue = "I feel strangely compelled to serve food to all the tables...
-But there's only one plate..."
+simple_dialogue = "I feel strangely compelled to serve food to one of the tables..."
 
 [node name="serving_window" parent="entities/kitchen_room" node_paths=PackedStringArray("tables", "key") instance=ExtResource("22_abo3h")]
 position = Vector2(480, 968)
