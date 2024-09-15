@@ -8,7 +8,7 @@
 script = ExtResource("1_ob21i")
 
 [node name="time_manager" parent="." instance=ExtResource("2_fatra")]
-max_time = 1000.0
+max_time = 180.0
 
 [node name="game" type="Node2D" parent="."]
 

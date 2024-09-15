@@ -36,6 +36,14 @@ func reset_loop():
 	if remover:
 		remover.reset_loop()
 		remover = null
+		
+func reset_loop_frozen():
+	if remover:
+		remover.reset_loop()
+		remover = null
+	
+func can_freeze():
+	return false
 	
 func interact():
 	super.interact()

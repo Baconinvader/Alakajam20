@@ -20,6 +20,7 @@ frame = 4
 frame_progress = 1.0
 
 [node name="kill_area" parent="." instance=ExtResource("4_oa5ff")]
+enabled = true
 
 [node name="shape" type="CollisionShape2D" parent="kill_area"]
 shape = SubResource("CircleShape2D_13wm0")
