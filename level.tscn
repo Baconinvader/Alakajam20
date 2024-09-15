@@ -68,7 +68,7 @@ layer_0/tile_data = PackedInt32Array(1769473, 262144, 0, 1769474, 327680, 0, 157
 [node name="markers" type="Node2D" parent="."]
 
 [node name="spawn" type="Marker2D" parent="markers"]
-position = Vector2(420, 1168)
+position = Vector2(112, 144)
 gizmo_extents = 20.0
 
 [node name="entities" type="Node2D" parent="."]
