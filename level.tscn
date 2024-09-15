@@ -131,11 +131,6 @@ position = Vector2(464, 184)
 
 [node name="torture_room" type="Node2D" parent="entities"]
 
-[node name="level_bg_music" type="AudioStreamPlayer" parent="entities/torture_room"]
-stream = ExtResource("35_w3jua")
-volume_db = -22.469
-pitch_scale = 0.39
-
 [node name="HookRack" parent="entities/torture_room" node_paths=PackedStringArray("tile_remover") instance=ExtResource("13_8fn78")]
 position = Vector2(416, 1040)
 tile_remover = NodePath("../wall_remover")
@@ -311,3 +306,8 @@ simple_dialogue = "Looks like that opened up a shortcut."
 position = Vector2(320, 184)
 
 [node name="explosions" type="Node2D" parent="."]
+
+[node name="level_bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_w3jua")
+volume_db = -22.469
+pitch_scale = 0.39
