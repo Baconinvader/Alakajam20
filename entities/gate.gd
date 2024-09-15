@@ -87,4 +87,4 @@ func can_interact():
 	return false
 	
 func can_freeze():
-	return true
+	return false
