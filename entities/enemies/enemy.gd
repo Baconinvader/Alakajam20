@@ -26,9 +26,16 @@ func reset_loop():
 	position = spawn_pos
 	has_target = false
 	$nav.target_position = spawn_pos
+	
+	$attack_area.set_deferred("monitoring",true)
+	
 
 
 func _physics_process(delta):
+	super._physics_process(delta)
+	if freed_loop:
+		return
+	
 	var player_dist:float = position.distance_to(g.player.position)
 	if player_dist <= sight_range:
 		var space_state = get_world_2d().direct_space_state
@@ -54,12 +61,15 @@ func _physics_process(delta):
 	$target.position = $nav.target_position - position
 	#print($nav.distance_to_target(), " -> ", $nav.is_target_reached(), ", ", $nav.is_navigation_finished(), ", ", $nav.target_desired_distance)
 	
-	super._physics_process(delta)
+	
 
 	
 func _on_nav_target_reached():
 	pass
 
+func free_loop():
+	super.free_loop()
+	$attack_area.set_deferred("monitoring",false)
 
 func _on_nav_navigation_finished():
 	if not can_see_player:
