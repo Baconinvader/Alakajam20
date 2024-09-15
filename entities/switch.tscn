@@ -2,23 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_72riq"]
 [ext_resource type="Script" path="res://entities/switch.gd" id="2_12d61"]
-[ext_resource type="Texture2D" uid="uid://blqp1a4xwvxht" path="res://assets/trap/switch_off.png" id="2_pcmtg"]
-[ext_resource type="Texture2D" uid="uid://mx8fmhd8nxcu" path="res://assets/trap/switch_on.png" id="4_0vepc"]
+[ext_resource type="Texture2D" uid="uid://cf5rbdmeye4vn" path="res://assets/trap/switch_red_on.png" id="4_tme83"]
 [ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="5_0sdin"]
+[ext_resource type="Texture2D" uid="uid://bysjq4dcpbuvj" path="res://assets/trap/switch_red_off.png" id="5_xjoec"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oxxfq"]
 radius = 16.0
 
 [node name="Switch" instance=ExtResource("1_72riq")]
 script = ExtResource("2_12d61")
-off_tex = ExtResource("2_pcmtg")
-on_tex = ExtResource("4_0vepc")
+off_tex = ExtResource("5_xjoec")
+on_tex = ExtResource("4_tme83")
 direct_switch = true
 
 [node name="static_sprite" parent="." index="1"]
-texture = ExtResource("2_pcmtg")
+texture = ExtResource("5_xjoec")
 
-[node name="InteractArea" parent="." index="3" instance=ExtResource("5_0sdin")]
+[node name="interact_area" parent="." index="3" instance=ExtResource("5_0sdin")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" index="1"]
+[node name="shape" type="CollisionShape2D" parent="interact_area" index="1"]
 shape = SubResource("CircleShape2D_oxxfq")

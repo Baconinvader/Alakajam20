@@ -2,27 +2,26 @@
 
 [ext_resource type="Script" path="res://assets/trap/explosion.gd" id="1_kwyi8"]
 [ext_resource type="PackedScene" uid="uid://kyb3gme5uedd" path="res://tile_explosion_remover.tscn" id="2_w4j3e"]
-[ext_resource type="Texture2D" uid="uid://cjfxed08ny7u8" path="res://assets/explosion.png" id="2_xl286"]
+[ext_resource type="SpriteFrames" uid="uid://c1uuhxrurj4qa" path="res://assets/trap/explosion_frames.tres" id="3_13h38"]
+[ext_resource type="PackedScene" uid="uid://cp7ymcig4csyl" path="res://assets/trap/kill_area.tscn" id="4_oa5ff"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ml88g"]
-atlas = ExtResource("2_xl286")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_vk31p"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ml88g")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="CircleShape2D" id="CircleShape2D_13wm0"]
+radius = 24.0
 
 [node name="Explosion" type="Node2D"]
 script = ExtResource("1_kwyi8")
+radius = 1.0
 
 [node name="remover" parent="." instance=ExtResource("2_w4j3e")]
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_vk31p")
+sprite_frames = ExtResource("3_13h38")
+frame = 4
+frame_progress = 1.0
+
+[node name="kill_area" parent="." instance=ExtResource("4_oa5ff")]
+
+[node name="shape" type="CollisionShape2D" parent="kill_area"]
+shape = SubResource("CircleShape2D_13wm0")
+
+[connection signal="animation_finished" from="sprite" to="." method="_on_sprite_animation_finished"]

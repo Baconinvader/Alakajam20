@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh6tofallkc0r"
-path="res://.godot/imported/food1.png-10fb62368dd96f215b428e6f8cf3d0a0.ctex"
+uid="uid://c1yg33q2ov2kg"
+path="res://.godot/imported/big_gate_side.png-e1c6dcd1052cec7469d8e1500f23e61a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/kitchen/food1.png"
-dest_files=["res://.godot/imported/food1.png-10fb62368dd96f215b428e6f8cf3d0a0.ctex"]
+source_file="res://assets/big_gate_side.png"
+dest_files=["res://.godot/imported/big_gate_side.png-e1c6dcd1052cec7469d8e1500f23e61a.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpc1o2mcvb7ey"]
+[gd_scene load_steps=5 format=3 uid="uid://cpc1o2mcvb7ey"]
 
 [ext_resource type="PackedScene" uid="uid://c8s54m60mabi0" path="res://entities/enemies/enemy.tscn" id="1_qqs4m"]
 [ext_resource type="SpriteFrames" uid="uid://df0ip2rcrglw8" path="res://assets/creature/soldier_frames.tres" id="2_6jt8b"]
@@ -6,15 +6,20 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_qijvq"]
 radius = 8.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jn71t"]
+radius = 12.0
+
 [node name="Soldier" instance=ExtResource("1_qqs4m")]
-move_speed = 16.0
+sight_range = 256.0
+min_player_dist = 16.0
+move_speed = 100.0
 is_static = true
 
 [node name="shape" parent="." index="0"]
 shape = SubResource("CircleShape2D_qijvq")
 
-[node name="static_sprite" parent="." index="1"]
-texture = null
-
 [node name="sprite" parent="." index="2"]
 sprite_frames = ExtResource("2_6jt8b")
+
+[node name="shape" parent="attack_area" index="0"]
+shape = SubResource("CircleShape2D_jn71t")

@@ -26,7 +26,8 @@ func reset_loop():
 		if obj.do_reset:
 			if "frozen" in obj:
 				if obj.frozen:
-					obj.frozen = false
+					#obj.frozen = false
+					obj.reset_loop_frozen()
 				else:
 					obj.reset_loop()
 			else:

@@ -1,12 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm82i4pyvuufs"]
+[gd_scene load_steps=6 format=3 uid="uid://bm82i4pyvuufs"]
 
 [ext_resource type="PackedScene" uid="uid://1hhgaevb2cbh" path="res://entities/trap.tscn" id="1_mihdw"]
 [ext_resource type="Script" path="res://entities/bomb.gd" id="2_ysen2"]
-[ext_resource type="Texture2D" uid="uid://byu77873ako62" path="res://assets/bomb.png" id="3_fxb5x"]
+[ext_resource type="SpriteFrames" uid="uid://ll0k4kepmaef" path="res://assets/bomb_frames.tres" id="3_0hiaa"]
+[ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="4_mceas"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mu0sp"]
+radius = 16.0
 
 [node name="Bomb" instance=ExtResource("1_mihdw")]
 script = ExtResource("2_ysen2")
-trigger_time = 2.0
+trigger_time = 6.0
 
-[node name="static_sprite" parent="." index="1"]
-texture = ExtResource("3_fxb5x")
+[node name="sprite" parent="." index="2"]
+sprite_frames = ExtResource("3_0hiaa")
+animation = &"armed"
+
+[node name="interact_area" parent="." index="3" instance=ExtResource("4_mceas")]
+
+[node name="shape" type="CollisionShape2D" parent="interact_area" index="1"]
+shape = SubResource("CircleShape2D_mu0sp")
