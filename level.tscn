@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ckr2nq16241ff"]
+[gd_scene load_steps=37 format=3 uid="uid://ckr2nq16241ff"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_0y1sb"]
 [ext_resource type="Material" path="res://assets/frozen_material.tres" id="1_j68ay"]
@@ -30,9 +30,10 @@
 [ext_resource type="PackedScene" uid="uid://b0uv7xc2liv51" path="res://entities/serving_window.tscn" id="22_abo3h"]
 [ext_resource type="PackedScene" uid="uid://cpc1o2mcvb7ey" path="res://entities/enemies/soldier.tscn" id="23_72j8s"]
 [ext_resource type="PackedScene" uid="uid://dgcgkpatpek5g" path="res://assets/barracks/steam_controller.tscn" id="24_cxy7w"]
+[ext_resource type="Texture2D" uid="uid://bij3v1y0nrqro" path="res://assets/raw_meat.png" id="24_j4tqn"]
 [ext_resource type="PackedScene" uid="uid://p1nayk7306ne" path="res://entities/stairs/valve.tscn" id="25_jt17k"]
 [ext_resource type="PackedScene" uid="uid://bupox0swngrxq" path="res://entities/big_gate_side.tscn" id="26_oq67b"]
-[ext_resource type="PackedScene" path="res://assets/trap/spikes.tscn" id="29_ifx0h"]
+[ext_resource type="PackedScene" uid="uid://c6o6801jlht8l" path="res://assets/trap/spikes.tscn" id="29_ifx0h"]
 [ext_resource type="PackedScene" path="res://assets/trap/rubble.tscn" id="33_0uhef"]
 [ext_resource type="AudioStream" uid="uid://cc3k83jvvl1xg" path="res://assets/sound/Lost in the Dessert.wav" id="35_w3jua"]
 
@@ -53,7 +54,7 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 1, 1, 65536, 0, 2, 65536, 0, 3, 
 [node name="decor_tiles" type="TileMap" parent="."]
 tile_set = ExtResource("1_yuro1")
 format = 2
-layer_0/tile_data = PackedInt32Array(1769473, 262144, 0, 1769474, 327680, 0, 1572897, 327680, 3, 1572898, 327680, 3, 1572899, 327680, 3, 1572900, 327680, 3, 1376290, 262144, 4, 1376291, 262144, 4, 2424835, 262144, 1, 2424836, 262144, 1, 2424837, 262144, 1, 2424838, 262144, 1, 2490374, 262144, 1, 2490373, 262144, 1, 2490372, 262144, 1, 2490371, 262144, 1, 2359304, 262144, 2, 1900554, 262144, 2, 1703952, 262144, 2, 1900576, 327680, 2, 917527, 327680, 2, 196611, 393216, 1, 262146, 524288, 1, 262148, 589824, 1, 327683, 458752, 1, 131085, 458752, 2, -131062, 393216, 2, 1572893, 65536, 1, 1507357, 131072, 5, 1572896, 65536, 1, 1507360, 131072, 5, 655402, 393216, 4, 655403, 524288, 5, 720939, 524288, 4, 786475, 524288, 4, 852011, 524288, 4, 1114154, 524288, 3, 1114153, 393216, 4, 1114152, 393216, 4, 1114151, 393216, 5, 1179687, 589824, 3, 1245223, 524288, 4, 1310759, 524288, 4, 1376295, 589824, 3, 1441831, 524288, 4, 1507367, 524288, 4, 1572903, 589824, 3, 1572902, 393216, 4, 1572901, 393216, 4, 1376294, 393216, 4, 1376293, 393216, 4, 1179686, 393216, 4, 1179685, 393216, 4, 1179684, 393216, 4, 1179683, 393216, 4, 1179682, 393216, 4, 1179681, 393216, 5, 1245217, 524288, 4, 1638439, 393216, 3, 1638440, 393216, 4, 1638441, 393216, 4, 1638442, 393216, 4, 1638443, 393216, 4, 1638444, 393216, 4, 1638445, 393216, 4, 1638446, 393216, 4, 1048618, 393216, 5, 1048619, 524288, 3, 917547, 524288, 4, 983083, 524288, 4)
+layer_0/tile_data = PackedInt32Array(1769473, 262144, 0, 1769474, 327680, 0, 1572897, 327680, 3, 1572898, 327680, 3, 1572899, 327680, 3, 1572900, 327680, 3, 1376290, 262144, 4, 1376291, 262144, 4, 2424835, 262144, 1, 2424836, 262144, 1, 2424837, 262144, 1, 2424838, 262144, 1, 2490374, 262144, 1, 2490373, 262144, 1, 2490372, 262144, 1, 2490371, 262144, 1, 2359304, 262144, 2, 1900554, 262144, 2, 1703952, 262144, 2, 1900576, 327680, 2, 917527, 327680, 2, 196611, 393216, 1, 262146, 524288, 1, 262148, 589824, 1, 327683, 458752, 1, 131085, 458752, 2, -131062, 393216, 2, 1572893, 65536, 1, 1507357, 131072, 5, 1572896, 65536, 1, 1507360, 131072, 5, 655402, 393216, 4, 655403, 524288, 5, 720939, 524288, 4, 786475, 524288, 4, 852011, 524288, 4, 1114154, 524288, 3, 1114153, 393216, 4, 1114152, 393216, 4, 1114151, 393216, 5, 1179687, 589824, 3, 1245223, 524288, 4, 1310759, 524288, 4, 1376295, 589824, 3, 1441831, 524288, 4, 1507367, 524288, 4, 1572903, 589824, 3, 1572902, 393216, 4, 1572901, 393216, 4, 1376294, 393216, 4, 1376293, 393216, 4, 1179686, 393216, 4, 1179685, 393216, 4, 1179684, 393216, 4, 1179683, 393216, 4, 1179682, 393216, 4, 1179681, 393216, 5, 1245217, 524288, 4, 1638439, 393216, 3, 1638440, 393216, 4, 1638441, 393216, 4, 1638442, 393216, 4, 1638443, 393216, 4, 1638444, 393216, 4, 1638445, 393216, 4, 1638446, 393216, 4, 1048618, 393216, 5, 1048619, 524288, 3, 917547, 524288, 4, 983083, 524288, 4, 1572865, 65536, 3)
 
 [node name="markers" type="Node2D" parent="."]
 
@@ -70,8 +71,12 @@ position = Vector2(304, 32)
 trigger_time = 1.0
 
 [node name="spikes2" parent="entities/cell_room" instance=ExtResource("29_ifx0h")]
-position = Vector2(304, 64)
+position = Vector2(336, 62)
 trigger_time = 2.0
+
+[node name="spikes3" parent="entities/cell_room" instance=ExtResource("29_ifx0h")]
+position = Vector2(320, 100)
+trigger_time = 1.25
 
 [node name="uu_falling_trap" parent="entities/cell_room" instance=ExtResource("5_rir70")]
 position = Vector2(-416, -376)
@@ -82,8 +87,9 @@ position = Vector2(336, -80)
 [node name="switch1" parent="entities/cell_room" instance=ExtResource("6_uxam2")]
 position = Vector2(432, 48)
 
-[node name="bomb" parent="entities/cell_room" instance=ExtResource("7_mqdqb")]
+[node name="bomb" parent="entities/cell_room" node_paths=PackedStringArray("rubble") instance=ExtResource("7_mqdqb")]
 position = Vector2(240, 152)
+rubble = NodePath("../../hallways/rubble")
 
 [node name="gate1" parent="entities/cell_room" node_paths=PackedStringArray("switch") instance=ExtResource("8_kfcc7")]
 position = Vector2(144, 16)
@@ -151,6 +157,26 @@ item = NodePath("../meat2_item")
 
 [node name="wall_remover" parent="entities/torture_room" instance=ExtResource("18_j8fum")]
 position = Vector2(560, 1184)
+
+[node name="meat_clue1" type="Sprite2D" parent="entities/torture_room"]
+position = Vector2(49, 794)
+texture = ExtResource("24_j4tqn")
+region_enabled = true
+region_rect = Rect2(64, 0, 32, 32)
+
+[node name="meat_clue3" type="Sprite2D" parent="entities/torture_room"]
+position = Vector2(140, 797)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("24_j4tqn")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="meat_clue2" type="Sprite2D" parent="entities/torture_room"]
+position = Vector2(113, 794)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_j4tqn")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
 
 [node name="kitchen_room" type="Node2D" parent="entities"]
 
