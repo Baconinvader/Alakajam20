@@ -41,4 +41,12 @@ func interact():
 	super.interact()
 	armed = not armed
 	
+## Overwrite for more complex dialogue
+func interaction_dialogue() -> String:
+	if armed:
+		return "Defused the bomb.\nHopefully it won't cause that rubble to fall now."
+	else:
+		return "Re-lit the bomb."
+	return simple_dialogue
+
 	

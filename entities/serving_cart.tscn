@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2pyuhqci0seg"]
+[gd_scene load_steps=4 format=3 uid="uid://c2pyuhqci0seg"]
 
 [ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_ot4a4"]
 [ext_resource type="Texture2D" uid="uid://bea5cy0tyx8ks" path="res://assets/kitchen/serving_cart.png" id="2_kf0nc"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0s7fe"]
+radius = 12.0416
+
 [node name="ServingCart" instance=ExtResource("1_ot4a4")]
+
+[node name="shape" parent="." index="0"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_0s7fe")
 
 [node name="static_sprite" parent="." index="1"]
 texture = ExtResource("2_kf0nc")

@@ -1,20 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2wcx7dyr24dr"]
+[gd_scene load_steps=7 format=3 uid="uid://d2wcx7dyr24dr"]
 
 [ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_mb7f5"]
 [ext_resource type="Script" path="res://assets/trap/rubble.gd" id="2_8aw58"]
 [ext_resource type="Texture2D" uid="uid://ditt4v4bi1oeg" path="res://assets/debris1.png" id="3_wo81i"]
+[ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="4_f5vds"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkcar"]
 size = Vector2(48, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcjqs"]
+size = Vector2(32, 34)
 
 [node name="Rubble" instance=ExtResource("1_mb7f5")]
 script = ExtResource("2_8aw58")
 fall_time = 1.0
 fall_height = 32.0
 start_collidable = false
+simple_dialogue = "This rubble from the bomb blast is blocking the way.
+I can't get through."
+can_repeat_dialogue = true
 
 [node name="shape" parent="." index="0"]
 shape = SubResource("RectangleShape2D_jkcar")
 
 [node name="static_sprite" parent="." index="1"]
 texture = ExtResource("3_wo81i")
+
+[node name="interact_area" parent="." index="3" instance=ExtResource("4_f5vds")]
+
+[node name="shape" type="CollisionShape2D" parent="interact_area" index="2"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_gcjqs")

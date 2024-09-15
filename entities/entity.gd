@@ -9,6 +9,11 @@ class_name Entity
 @export var start_collidable:bool = true
 @export var start_visible:bool = true
 @export var is_static:bool = true
+@export_multiline var simple_dialogue:String = ""
+
+var first_interaction:bool = true
+var old_dialogue:Array[String] = []
+@export var can_repeat_dialogue:bool = false
 
 var frozen_mat:ShaderMaterial = preload("res://assets/frozen_material.tres")
 
@@ -59,12 +64,25 @@ func free_loop():
 	
 ## Override this as required, called whenever interaction occurs
 func interact():
-	pass
+	if first_interaction:
+		first_interaction = false
+	
+	var dlg = interaction_dialogue()
+	if can_repeat_dialogue:
+		d.basic_dialogue(dlg)
+	else:
+		if dlg not in old_dialogue:
+			old_dialogue.append(dlg)
+			d.basic_dialogue(dlg)
 	
 ## Override this as required, checks if this object can be interacted with
 func can_interact() -> bool:
 	return true
 
-### Override this as required if differs from can_interact
+## Override this as required if differs from can_interact
 func can_freeze() -> bool:
 	return can_interact()
+	
+## Overwrite for more complex dialogue
+func interaction_dialogue() -> String:
+	return simple_dialogue

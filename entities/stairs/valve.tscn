@@ -10,3 +10,4 @@ script = ExtResource("2_l8duu")
 steam_controllers = []
 off_tex = ExtResource("2_1k38h")
 on_tex = ExtResource("3_u5gkn")
+simple_dialogue = "Turned the valve... I can hear something in the other room."

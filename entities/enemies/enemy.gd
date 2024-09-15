@@ -42,7 +42,7 @@ func _physics_process(delta):
 		else:
 			can_see_player = false
 			
-	if player_dist > min_player_dist:
+	if player_dist > min_player_dist and not g.player.interacting:
 		if target.distance_to(position) < move_speed*delta:
 			position = target
 			move_dir = Vector2.ZERO

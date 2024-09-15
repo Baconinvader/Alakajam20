@@ -32,7 +32,7 @@ func trigger():
 	
 ## Override this as required, called whenever interaction occurs
 func interact():
-	pass
+	super.interact()
 	
 ## Override this as required, checks if this object
 func can_interact() -> bool:
