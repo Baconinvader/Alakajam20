@@ -18,11 +18,13 @@ var frozen:bool = false:set=_set_frozen
 func _set_frozen(val:bool):
 	frozen = val
 	if frozen:
-		$static_sprite.material = frozen_mat
-		$sprite.material = frozen_mat
+		for child in get_children():
+			if child is Sprite2D or child is AnimatedSprite2D:
+				child.material = frozen_mat
 	else:
-		$static_sprite.material = null
-		$sprite.material = null
+		for child in get_children():
+			if child is Sprite2D or child is AnimatedSprite2D:
+				child.material = null
 		
 
 ## Whether this object has been "freed" this loop, like queue_free but reversible

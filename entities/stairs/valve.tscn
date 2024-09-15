@@ -10,6 +10,3 @@ script = ExtResource("2_l8duu")
 steam_controllers = []
 off_tex = ExtResource("2_1k38h")
 on_tex = ExtResource("3_u5gkn")
-
-[node name="static_sprite" parent="." index="1"]
-material = null
