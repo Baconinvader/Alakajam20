@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://clsmbg88xxm0f"
-path="res://.godot/imported/You_re in the Future.wav-2efebcafd3e6d6cf6ce912f51745f5ad.sample"
+path="res://.godot/imported/end_screen.wav-edec7f8b4cd83b663591c782e23ae843.sample"
 
 [deps]
 
-source_file="res://assets/sound/You_re in the Future.wav"
-dest_files=["res://.godot/imported/You_re in the Future.wav-2efebcafd3e6d6cf6ce912f51745f5ad.sample"]
+source_file="res://assets/sound/end_screen.wav"
+dest_files=["res://.godot/imported/end_screen.wav-edec7f8b4cd83b663591c782e23ae843.sample"]
 
 [params]
 

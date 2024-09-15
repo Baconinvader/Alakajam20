@@ -17,8 +17,11 @@ class_name Level
 ## Kitchen room
 @onready var kitchen_room:Node2D = $entities/kitchen_room
 
-
+@onready var bg_m = $level_bg_music
 @onready var tiles:TileMap = $tiles
+
+func _ready():
+	bg_m.play()
 
 ## Reset all the resetable stuff for the next loop
 func reset_loop():
