@@ -69,7 +69,10 @@ func _process(delta):
 	pass
 	
 func can_interact():
-	return false
+	if not raised:
+		return true
+	else:
+		return false
 	
 func can_freeze():
 	return true
