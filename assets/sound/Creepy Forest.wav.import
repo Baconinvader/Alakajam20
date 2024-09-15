@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmr6gpa713450"
+path="res://.godot/imported/Creepy Forest.wav-a3e82da4775a979171af6653ee61053c.sample"
+
+[deps]
+
+source_file="res://assets/sound/Creepy Forest.wav"
+dest_files=["res://.godot/imported/Creepy Forest.wav-a3e82da4775a979171af6653ee61053c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
