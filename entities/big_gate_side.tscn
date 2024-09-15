@@ -9,11 +9,11 @@ size = Vector2(16, 64)
 
 [node name="BigGateSide" instance=ExtResource("1_0o6hh")]
 
-[node name="outline" parent="." index="0"]
-texture = ExtResource("2_w5n7y")
-
-[node name="shape" parent="." index="1"]
+[node name="shape" parent="." index="0"]
 shape = SubResource("RectangleShape2D_r0u5i")
 
-[node name="static_sprite" parent="." index="2"]
+[node name="static_sprite" parent="." index="1"]
 texture = ExtResource("3_xhqxb")
+
+[node name="outline" parent="." index="3"]
+texture = ExtResource("2_w5n7y")

@@ -35,6 +35,8 @@ func reset_loop():
 					obj.reset_loop()
 			else:
 				obj.reset_loop()
+		else:
+			pass
 				
 	#softlock prevention, bit of a hack
 	var valve:Valve = $entities/stairs_room/valve

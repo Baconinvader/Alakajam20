@@ -21,6 +21,7 @@ var frozen_mat:ShaderMaterial = preload("res://assets/frozen_material.tres")
 #@export var can_freeze:bool = true
 var frozen:bool = false:set=_set_frozen
 func _set_frozen(val:bool):
+	var old_frozen = frozen
 	frozen = val
 	if frozen:
 		for child in get_children():
@@ -31,6 +32,11 @@ func _set_frozen(val:bool):
 			if child is Sprite2D or child is AnimatedSprite2D:
 				child.material = null
 		
+	if old_frozen != frozen:
+		_on_frozen()
+		
+func _on_frozen():
+	pass
 
 ## Whether this object has been "freed" this loop, like queue_free but reversible
 var freed_loop:bool = false

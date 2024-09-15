@@ -11,6 +11,8 @@ class_name Gate
 @export var start_raised:bool = false
 var raised:bool = false
 
+@export var lock:KeyLock = null
+
 func _ready():
 	super._ready()
 	if switch:
@@ -68,11 +70,21 @@ func lower():
 func _process(delta):
 	pass
 	
+#func can_interact():
+#	return super.can_interact()
+	#if not raised:
+	#	return true
+	#else:
+#		return false
+	
 func can_interact():
 	if not raised:
-		return true
-	else:
-		return false
+		if not lock:
+			return true
+		else:
+			if not lock.can_interact():
+				return true
+	return false
 	
 func can_freeze():
 	return true

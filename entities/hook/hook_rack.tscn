@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1n68f02b02nt"]
+[gd_scene load_steps=8 format=3 uid="uid://b1n68f02b02nt"]
 
 [ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_33c5n"]
 [ext_resource type="Script" path="res://entities/hook/hook_rack.gd" id="2_r1gnc"]
 [ext_resource type="Texture2D" uid="uid://dgckkmeq5kqsd" path="res://assets/hook_rack.png" id="3_htkcd"]
 [ext_resource type="PackedScene" uid="uid://cem15h82l4cki" path="res://entities/hook/hook.tscn" id="4_f5h62"]
+[ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="5_45dww"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0nmso"]
 size = Vector2(48, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bddg"]
+size = Vector2(72, 40)
 
 [node name="HookRack" instance=ExtResource("1_33c5n")]
 script = ExtResource("2_r1gnc")
@@ -27,3 +31,9 @@ position = Vector2(4, 8)
 
 [node name="3" parent="hooks" index="2" instance=ExtResource("4_f5h62")]
 position = Vector2(28, 8)
+
+[node name="interact_area" parent="." index="4" instance=ExtResource("5_45dww")]
+
+[node name="shape" type="CollisionShape2D" parent="interact_area" index="2"]
+position = Vector2(4, 12)
+shape = SubResource("RectangleShape2D_2bddg")
