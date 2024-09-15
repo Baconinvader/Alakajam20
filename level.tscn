@@ -210,6 +210,7 @@ position = Vector2(592, 712)
 
 [node name="table3" parent="entities/kitchen_room" instance=ExtResource("19_2yruk")]
 position = Vector2(592, 776)
+simple_dialogue = ""
 
 [node name="cart" parent="entities/kitchen_room" instance=ExtResource("20_3pk44")]
 position = Vector2(600, 888)
@@ -279,6 +280,7 @@ simple_dialogue = "Looks like it's locked, there must be a switch somewhere."
 [node name="valve" parent="entities/stairs_room" node_paths=PackedStringArray("steam_controllers") instance=ExtResource("25_jt17k")]
 position = Vector2(1328, 368)
 steam_controllers = [NodePath("../../barracks_room/steam1"), NodePath("../../barracks_room/steam2"), NodePath("../../barracks_room/steam3"), NodePath("../../barracks_room/steam4")]
+simple_dialogue = ""
 
 [node name="office_room" type="Node2D" parent="entities"]
 
@@ -317,7 +319,6 @@ simple_dialogue = "Looks like it's locked from the other side..."
 position = Vector2(464, 432)
 off_tex = ExtResource("36_dwt2d")
 on_tex = ExtResource("37_jrps5")
-simple_dialogue = "Looks like that opened up a shortcut."
 
 [node name="rubble" parent="entities/hallways" instance=ExtResource("33_0uhef")]
 position = Vector2(320, 184)
