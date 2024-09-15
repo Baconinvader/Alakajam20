@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm82i4pyvuufs"]
 
 [ext_resource type="PackedScene" uid="uid://1hhgaevb2cbh" path="res://entities/trap.tscn" id="1_mihdw"]
-[ext_resource type="Texture2D" uid="uid://byu77873ako62" path="res://assets/bomb.png" id="2_grflb"]
 [ext_resource type="Script" path="res://entities/bomb.gd" id="2_ysen2"]
+[ext_resource type="Texture2D" uid="uid://byu77873ako62" path="res://assets/bomb.png" id="3_fxb5x"]
 
 [node name="Bomb" instance=ExtResource("1_mihdw")]
 script = ExtResource("2_ysen2")
 trigger_time = 2.0
 
 [node name="static_sprite" parent="." index="1"]
-texture = ExtResource("2_grflb")
+texture = ExtResource("3_fxb5x")

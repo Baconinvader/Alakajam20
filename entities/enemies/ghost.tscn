@@ -1,7 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dywm5v1p34f1h"]
+[gd_scene load_steps=4 format=3 uid="uid://dywm5v1p34f1h"]
 
 [ext_resource type="PackedScene" uid="uid://c8s54m60mabi0" path="res://entities/enemies/enemy.tscn" id="1_rxljp"]
+[ext_resource type="SpriteFrames" uid="uid://cvrkpq7nrqysl" path="res://assets/creature/ghost_frames.tres" id="2_tyety"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qijvq"]
+radius = 8.0
 
 [node name="Ghost" instance=ExtResource("1_rxljp")]
 move_speed = 16.0
 is_static = true
+
+[node name="shape" parent="." index="0"]
+shape = SubResource("CircleShape2D_qijvq")
+
+[node name="static_sprite" parent="." index="1"]
+texture = null
+
+[node name="sprite" parent="." index="2"]
+sprite_frames = ExtResource("2_tyety")

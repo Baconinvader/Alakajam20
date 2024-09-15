@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8s54m60mabi0"]
+[gd_scene load_steps=5 format=3 uid="uid://c8s54m60mabi0"]
 
 [ext_resource type="PackedScene" uid="uid://cbxh6udih8jhj" path="res://entities/creature.tscn" id="1_6iu15"]
-[ext_resource type="Texture2D" uid="uid://dx8h1onpkvwfw" path="res://assets/creature/ghost.png" id="2_tmad7"]
 [ext_resource type="Script" path="res://entities/enemies/enemy.gd" id="2_xe27x"]
 [ext_resource type="Texture2D" uid="uid://dlorxcvsogl5h" path="res://assets/interact_marker.png" id="4_wryyh"]
 
@@ -13,9 +12,6 @@ script = ExtResource("2_xe27x")
 sight_range = 128.0
 min_player_dist = 48.0
 move_speed = 64.0
-
-[node name="static_sprite" parent="." index="1"]
-texture = ExtResource("2_tmad7")
 
 [node name="nav" type="NavigationAgent2D" parent="." index="3"]
 debug_enabled = true

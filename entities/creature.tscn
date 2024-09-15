@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbxh6udih8jhj"]
+[gd_scene load_steps=4 format=3 uid="uid://cbxh6udih8jhj"]
 
 [ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_nbvfg"]
 [ext_resource type="Script" path="res://entities/creature.gd" id="2_0resd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bdhgx"]
+radius = 8.0
 
 [node name="Creature" groups=["creature"] instance=ExtResource("1_nbvfg")]
 script = ExtResource("2_0resd")
 move_speed = 96.0
 is_static = false
+
+[node name="shape" parent="." index="0"]
+shape = SubResource("CircleShape2D_bdhgx")

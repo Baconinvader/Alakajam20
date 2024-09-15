@@ -14,8 +14,5 @@ item_name = "food"
 [node name="table_sprite" type="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_kuj1r")
 
-[node name="static_sprite" parent="." index="2"]
-texture = ExtResource("2_kuj1r")
-
 [node name="shape" parent="InteractArea" index="1"]
 shape = SubResource("RectangleShape2D_2nl43")

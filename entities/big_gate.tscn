@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dk137hlgwb7gl"]
+[gd_scene load_steps=3 format=3 uid="uid://dk137hlgwb7gl"]
 
 [ext_resource type="PackedScene" uid="uid://c02u55jp8t4ey" path="res://entities/gate.tscn" id="1_7oipu"]
-[ext_resource type="Texture2D" uid="uid://csaxugt5pyf5i" path="res://assets/big_gate.png" id="2_fb8b8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7s7j5"]
 size = Vector2(64, 64)
@@ -10,6 +9,3 @@ size = Vector2(64, 64)
 
 [node name="shape" parent="." index="0"]
 shape = SubResource("RectangleShape2D_7s7j5")
-
-[node name="static_sprite" parent="." index="1"]
-texture = ExtResource("2_fb8b8")

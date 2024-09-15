@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://6prpal4eci82"]
+[gd_scene load_steps=6 format=3 uid="uid://6prpal4eci82"]
 
 [ext_resource type="PackedScene" uid="uid://cbxh6udih8jhj" path="res://entities/creature.tscn" id="1_tq6o8"]
 [ext_resource type="Script" path="res://entities/player.gd" id="2_qrmht"]
 [ext_resource type="Texture2D" uid="uid://cx6isrkt5o4bx" path="res://assets/test.png" id="3_rcsil"]
+[ext_resource type="SpriteFrames" uid="uid://dfmvimi2pygj3" path="res://assets/creature/player_frames.tres" id="4_2kc4c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_klh23"]
 radius = 32.0
@@ -15,9 +16,13 @@ position = Vector2(0, -40)
 texture = ExtResource("3_rcsil")
 
 [node name="cam" type="Camera2D" parent="." index="3"]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 
 [node name="interaction_area" type="Area2D" parent="." index="4"]
 
 [node name="shape" type="CollisionShape2D" parent="interaction_area" index="0"]
 shape = SubResource("CircleShape2D_klh23")
+
+[node name="sprite" parent="." index="5"]
+sprite_frames = ExtResource("4_2kc4c")
+animation = &"left"

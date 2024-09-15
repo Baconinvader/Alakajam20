@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://5grg0cfs0i4y" path="res://entities/entity.tscn" id="1_kc30y"]
 [ext_resource type="Script" path="res://entities/stairs/stairs.gd" id="2_ovesq"]
-[ext_resource type="Texture2D" uid="uid://hhfsxwbg5ppx" path="res://assets/stairs/stairs.png" id="3_qbdfp"]
+[ext_resource type="Texture2D" uid="uid://hhfsxwbg5ppx" path="res://assets/stairs/stairs.png" id="3_bvb0l"]
 [ext_resource type="PackedScene" uid="uid://e4iqm6cmxmur" path="res://interact/interact_area.tscn" id="4_oc7rv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5nb7r"]
@@ -19,7 +19,7 @@ position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_5nb7r")
 
 [node name="static_sprite" parent="." index="1"]
-texture = ExtResource("3_qbdfp")
+texture = ExtResource("3_bvb0l")
 
 [node name="interact_area" parent="." index="3" instance=ExtResource("4_oc7rv")]
 
