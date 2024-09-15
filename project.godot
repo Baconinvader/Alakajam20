@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Once More"
+config/name="Alakajam 20"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.png"
+config/icon="res://icon.svg"
 
 [autoload]
 
